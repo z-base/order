@@ -1,0 +1,11 @@
+{
+  "source": "Saran-R12/Receipts",
+  "title": "Saran-R12/Receipts",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/Saran-R12/Receipts",
+    "licenseFromApi": "apache-2.0",
+    "licenseFromReadme": "apache-2.0"
+  },
+  "resolvedLicense": "Apache-2.0",
+  "licenseText": null
+}

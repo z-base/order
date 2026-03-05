@@ -1,0 +1,10 @@
+{
+  "source": "bitmind/Fake-receipts",
+  "title": "bitmind/Fake-receipts",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/bitmind/Fake-receipts",
+    "licenseFromReadme": null
+  },
+  "resolvedLicense": "Unknown",
+  "licenseText": null
+}

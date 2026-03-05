@@ -1,0 +1,11 @@
+{
+  "source": "CC1984/mall_receipt_extraction_dataset",
+  "title": "CC1984/mall_receipt_extraction_dataset",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/CC1984/mall_receipt_extraction_dataset",
+    "licenseFromApi": "mit",
+    "licenseFromReadme": "mit"
+  },
+  "resolvedLicense": "MIT",
+  "licenseText": null
+}

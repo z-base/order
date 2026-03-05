@@ -1,0 +1,11 @@
+{
+  "source": "Lakshmiperumal/scanned_receipts",
+  "title": "Lakshmiperumal/scanned_receipts",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/Lakshmiperumal/scanned_receipts",
+    "licenseFromApi": "cc-by-4.0",
+    "licenseFromReadme": "cc-by-4.0"
+  },
+  "resolvedLicense": "CC-BY-4.0",
+  "licenseText": null
+}

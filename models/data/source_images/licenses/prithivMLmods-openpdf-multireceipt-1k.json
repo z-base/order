@@ -1,0 +1,11 @@
+{
+  "source": "prithivMLmods/Openpdf-MultiReceipt-1K",
+  "title": "Openpdf-MultiReceipt-1K",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/prithivMLmods/Openpdf-MultiReceipt-1K",
+    "licenseFromApi": "apache-2.0",
+    "licenseFromReadme": "apache-2.0"
+  },
+  "resolvedLicense": "Apache-2.0",
+  "licenseText": null
+}

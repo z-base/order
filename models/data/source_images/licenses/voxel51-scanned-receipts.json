@@ -1,0 +1,11 @@
+{
+  "source": "Voxel51/scanned_receipts",
+  "title": "Voxel51/scanned_receipts",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/Voxel51/scanned_receipts",
+    "licenseFromApi": "cc-by-4.0",
+    "licenseFromReadme": "cc-by-4.0"
+  },
+  "resolvedLicense": "CC-BY-4.0",
+  "licenseText": null
+}

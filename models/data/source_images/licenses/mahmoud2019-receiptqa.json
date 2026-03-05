@@ -1,0 +1,11 @@
+{
+  "source": "mahmoud2019/ReceiptQA",
+  "title": "mahmoud2019/ReceiptQA",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/mahmoud2019/ReceiptQA",
+    "licenseFromApi": "mit",
+    "licenseFromReadme": "mit"
+  },
+  "resolvedLicense": "MIT",
+  "licenseText": null
+}

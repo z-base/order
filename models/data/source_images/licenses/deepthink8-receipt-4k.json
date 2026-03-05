@@ -1,0 +1,10 @@
+{
+  "source": "deepthink8/receipt-4k",
+  "title": "deepthink8/receipt-4k",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/deepthink8/receipt-4k",
+    "licenseFromReadme": null
+  },
+  "resolvedLicense": "Unknown",
+  "licenseText": null
+}

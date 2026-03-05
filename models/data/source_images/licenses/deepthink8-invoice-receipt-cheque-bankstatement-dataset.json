@@ -1,0 +1,10 @@
+{
+  "source": "deepthink8/invoice-receipt-cheque-bankstatement-dataset",
+  "title": "deepthink8/invoice-receipt-cheque-bankstatement-dataset",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/deepthink8/invoice-receipt-cheque-bankstatement-dataset",
+    "licenseFromReadme": null
+  },
+  "resolvedLicense": "Unknown",
+  "licenseText": null
+}

@@ -1,0 +1,11 @@
+{
+  "source": "cdek-ocr/receipt-ocr-ru",
+  "title": "cdek-ocr/receipt-ocr-ru",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/cdek-ocr/receipt-ocr-ru",
+    "licenseFromApi": "mit",
+    "licenseFromReadme": "mit"
+  },
+  "resolvedLicense": "MIT",
+  "licenseText": null
+}

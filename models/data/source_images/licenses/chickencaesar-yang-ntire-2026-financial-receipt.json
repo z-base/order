@@ -1,0 +1,11 @@
+{
+  "source": "chickencaesar-yang/NTIRE_2026_Financial_Receipt",
+  "title": "chickencaesar-yang/NTIRE_2026_Financial_Receipt",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/chickencaesar-yang/NTIRE_2026_Financial_Receipt",
+    "licenseFromApi": "cc-by-nc-sa-4.0",
+    "licenseFromReadme": "cc-by-nc-sa-4.0"
+  },
+  "resolvedLicense": "cc-by-nc-sa-4.0",
+  "licenseText": null
+}

@@ -1,0 +1,10 @@
+{
+  "source": "Hemgg/invoices-and-receipts_ocr_v1",
+  "title": "Hemgg/invoices-and-receipts_ocr_v1",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/Hemgg/invoices-and-receipts_ocr_v1",
+    "licenseFromReadme": null
+  },
+  "resolvedLicense": "Unknown",
+  "licenseText": null
+}

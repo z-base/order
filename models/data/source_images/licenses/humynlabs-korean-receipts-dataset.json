@@ -1,0 +1,11 @@
+{
+  "source": "HumynLabs/Korean_Receipts_Dataset",
+  "title": "HumynLabs/Korean_Receipts_Dataset",
+  "evidence": {
+    "source": "https://huggingface.co/datasets/HumynLabs/Korean_Receipts_Dataset",
+    "licenseFromApi": "cc-by-4.0",
+    "licenseFromReadme": "cc-by-4.0"
+  },
+  "resolvedLicense": "CC-BY-4.0",
+  "licenseText": null
+}
