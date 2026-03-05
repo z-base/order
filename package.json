@@ -1,0 +1,74 @@
+{
+  "name": "@z-base/package-name",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [
+    "typescript",
+    "z-base"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<entity>/<package-name>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<entity>/<package-name>/issues"
+  },
+  "homepage": "https://z-base.github.io/<package-name>",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "format": "prettier . --write",
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node test/run-coverage.mjs && node test/e2e/run.mjs",
+    "bench": "npm run build && node benchmark/bench.js",
+    "prepare": "husky",
+    "prepublishOnly": "npm run test && npm run bench"
+  },
+  "c8": {
+    "all": true,
+    "include": [
+      "dist/**/*.js"
+    ],
+    "exclude": [
+      "dist/**/*.d.ts",
+      "test/**",
+      "benchmark/**",
+      "playwright.config.ts"
+    ]
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3",
+    "c8": "^10.1.3",
+    "fast-glob": "^3.3.3",
+    "husky": "^9.1.7",
+    "playwright": "^1.58.2",
+    "prettier": "^3.8.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@z-base/bytecodec": "^1.1.0",
+    "@z-base/cryptosuite": "^1.0.1",
+    "@z-base/zero-knowledge-credentials": "^1.0.2"
+  }
+}
