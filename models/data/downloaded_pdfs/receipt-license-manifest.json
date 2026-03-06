@@ -18,9 +18,7 @@
       "title": "prithivMLmods/Openpdf-MultiReceipt-1K",
       "sourceType": "huggingface",
       "language": "deu",
-      "languages": [
-        "deu"
-      ],
+      "languages": ["deu"],
       "license": "Apache-2.0",
       "evidencePath": "licenses/deu/prithivmlmods-openpdf-multireceipt-1k.json",
       "totalAvailable": 996,
@@ -826,9 +824,7 @@
           "mediaType": "application/octet-stream"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 996 files)."
-      ],
+      "skipped": ["Limit reached (80 of 996 files)."],
       "notes": "Multi-receipt PDF dataset with a strongly German receipt pool."
     }
   ]

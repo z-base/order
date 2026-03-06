@@ -5,14 +5,8 @@
   "tokenizerModelFile": "tokenizer.model",
   "tokenizerVocabFile": "tokenizer.vocab",
   "metricsFile": "metrics.json",
-  "inputNames": [
-    "input_ids",
-    "attention_mask",
-    "decoder_input_ids"
-  ],
-  "outputNames": [
-    "logits"
-  ],
+  "inputNames": ["input_ids", "attention_mask", "decoder_input_ids"],
+  "outputNames": ["logits"],
   "tokenIds": {
     "bos": 1,
     "eos": 2,
@@ -33,24 +27,11 @@
   },
   "validation": {
     "dummy_input_shape": {
-      "input_ids": [
-        1,
-        16
-      ],
-      "attention_mask": [
-        1,
-        16
-      ],
-      "decoder_input_ids": [
-        1,
-        8
-      ]
+      "input_ids": [1, 16],
+      "attention_mask": [1, 16],
+      "decoder_input_ids": [1, 8]
     },
-    "output_shape": [
-      1,
-      8,
-      665
-    ],
-    "max_abs_diff": 9.5367431640625e-07
+    "output_shape": [1, 8, 665],
+    "max_abs_diff": 9.5367431640625e-7
   }
 }

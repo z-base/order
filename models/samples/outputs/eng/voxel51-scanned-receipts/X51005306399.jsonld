@@ -1,0 +1,135 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "GasStation",
+      "name": "Shell ISNI Petro Trading",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "Company Number",
+          "value": "002643278-A"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Number",
+          "value": "0010 9010 5344"
+        }
+      ],
+      "telephone": "03-40212008",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 2685 Jln Genting Klang",
+        "postalCode": "53300",
+        "addressLocality": "KL"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "60000053668",
+      "orderDate": "2018-03-18T15:17:00",
+      "priceCurrency": "MYR",
+      "paymentMethod": "https://schema.org/Visa",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Site",
+          "value": "1066"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Pump Number",
+          "value": "02"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Fuel Volume",
+          "unitText": "litre",
+          "value": "35.10"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "MYR",
+          "value": "86.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST 6.00%",
+          "unitText": "MYR",
+          "value": "4.87"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Gross",
+          "unitText": "MYR",
+          "value": "86.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Shell Loyalty Card",
+          "value": "6018840126306675"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Points Awarded",
+          "value": 35
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "OPT",
+          "value": "02"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Relief Notice",
+          "value": "Diesel & Petrol RON 95 given Relief under Section 56 (3)(b) GST Act 2014"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "86.00",
+      "priceCurrency": "MYR",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2.450",
+        "priceCurrency": "MYR",
+        "unitText": "litre",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "litre"
+        }
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": "35.10",
+        "unitText": "litre"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "V-Power 97"
+    }
+  ]
+}

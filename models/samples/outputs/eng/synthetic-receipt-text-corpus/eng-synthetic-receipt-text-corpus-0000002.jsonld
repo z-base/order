@@ -1,0 +1,91 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Atlas Office Depot"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-0000002",
+      "orderDate": "2024-07-24T09:29:34",
+      "priceCurrency": "GBP",
+      "paymentMethod": "https://schema.org/Visa",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "GBP",
+          "value": "43.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "unitText": "GBP",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "GBP",
+          "value": "4.04"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tip",
+          "unitText": "GBP",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "GBP",
+          "value": "47.84"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "43.80",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "21.90",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "Printer Labels",
+      "sku": "SKU-7812"
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "BRIGHTLINE BISTRO",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6054 Main St",
+        "addressLocality": "Portland",
+        "addressRegion": "GA",
+        "postalCode": "19459"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-0000000",
+      "orderDate": "2022-01-02T20:19:25",
+      "priceCurrency": "GBP",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        },
+        {
+          "@id": "#offer-5"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "Alex"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment Method",
+          "value": "Card"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "GBP",
+          "value": "288.63"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "GBP",
+          "value": "24.60"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "GBP",
+          "value": "313.23"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "25.37",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "25.37",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "Notebook Set"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "57.60",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 4,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "14.40",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "Product",
+      "name": "Sparkling Water"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "111.12",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "37.04",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "Product",
+      "name": "Paper Towels"
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "29.74",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-4"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "29.74",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-4",
+      "@type": "Product",
+      "name": "Sparkling Water"
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "64.80",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-5"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "32.40",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-5",
+      "@type": "Product",
+      "name": "Ink Cartridge"
+    }
+  ]
+}

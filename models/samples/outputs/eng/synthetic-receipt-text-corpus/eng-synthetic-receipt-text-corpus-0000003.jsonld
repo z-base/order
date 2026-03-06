@@ -1,0 +1,225 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Cedar Hardware",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2315 Harbor Way",
+        "addressLocality": "Austin",
+        "addressRegion": "TX",
+        "postalCode": "18371"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-0000003",
+      "orderDate": "2025-11-27T12:11:26",
+      "priceCurrency": "CAD",
+      "paymentMethod": "https://schema.org/Visa",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        },
+        {
+          "@id": "#offer-5"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "CAD",
+          "value": "193.33"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "CAD",
+          "value": "13.55"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "CAD",
+          "value": "218.09"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "56.58",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "28.29",
+        "priceCurrency": "CAD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "Adhesive Tape"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "34.01",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "34.01",
+        "priceCurrency": "CAD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "Product",
+      "name": "Adhesive Tape"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "51.44",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 4,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "12.86",
+        "priceCurrency": "CAD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "Product",
+      "name": "Sparkling Water"
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "34.44",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "11.48",
+        "priceCurrency": "CAD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-4",
+      "@type": "Product",
+      "name": "Printer Labels"
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "16.86",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "8.43",
+        "priceCurrency": "CAD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-5"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-5",
+      "@type": "Product",
+      "name": "USB-C Cable"
+    }
+  ]
+}

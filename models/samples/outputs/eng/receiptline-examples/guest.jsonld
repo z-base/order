@@ -1,0 +1,114 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "orderNumber": "0003-01",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Order Type",
+          "value": "New Order"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Table",
+          "value": "A05"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Time",
+          "value": "19:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Party Size",
+          "value": 2
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "value": "185.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Service Charge",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "185.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Code",
+          "value": "0003"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "13.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "6.50",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "BEER"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "172.80",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "86.40",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "CHIDORI"
+    }
+  ]
+}

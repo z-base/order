@@ -2,13 +2,13 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@id": "#merchant-org",
+      "@id": "#merchant",
       "@type": "Organization",
-      "name": "MR D.I.Y. (Johor) Sdn Bhd",
+      "name": "MR D.I.Y. (M) SDN BHD",
       "identifier": {
         "@type": "PropertyValue",
         "name": "Company Registration Number",
-        "value": "933109-X"
+        "value": "866071-D"
       },
       "address": {
         "@type": "PostalAddress",
@@ -19,21 +19,13 @@
       }
     },
     {
-      "@id": "#merchant-store",
-      "@type": "Store",
-      "name": "MR D.I.Y. Tesco Tebrau",
-      "branchOf": {
-        "@id": "#merchant-org"
-      }
-    },
-    {
       "@id": "#order",
       "@type": "Order",
       "seller": {
-        "@id": "#merchant-store"
+        "@id": "#merchant"
       },
-      "orderNumber": "R000027830",
-      "orderDate": "2019-01-12T21:13:00",
+      "orderNumber": "R000002902",
+      "orderDate": "2018-11-18T13:58:00",
       "priceCurrency": "MYR",
       "paymentMethod": "https://schema.org/Cash",
       "paymentStatus": "https://schema.org/PaymentComplete",
@@ -49,9 +41,17 @@
         },
         {
           "@id": "#offer-4"
+        },
+        {
+          "@id": "#offer-5"
         }
       ],
       "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Branch",
+          "value": "TESCO PUTRA NILAI"
+        },
         {
           "@type": "PropertyValue",
           "name": "Receipt Type",
@@ -65,12 +65,12 @@
         {
           "@type": "PropertyValue",
           "name": "Shift Code",
-          "value": "ZK09"
+          "value": "2153"
         },
         {
           "@type": "PropertyValue",
           "name": "Register",
-          "value": "T4"
+          "value": "T2"
         },
         {
           "@type": "PropertyValue",
@@ -80,42 +80,42 @@
         {
           "@type": "PropertyValue",
           "name": "Total Items",
-          "value": 4
+          "value": 5
         },
         {
           "@type": "PropertyValue",
           "name": "Total Quantity",
-          "value": 4
+          "value": 5
         },
         {
           "@type": "PropertyValue",
           "name": "Total",
-          "value": "33.92",
-          "unitText": "MYR"
+          "unitText": "MYR",
+          "value": "30.91"
         },
         {
           "@type": "PropertyValue",
           "name": "Rounding Adjustment",
-          "value": "-0.02",
-          "unitText": "MYR"
+          "unitText": "MYR",
+          "value": "-0.01"
         },
         {
           "@type": "PropertyValue",
           "name": "Total Rounded",
-          "value": "33.90",
-          "unitText": "MYR"
+          "unitText": "MYR",
+          "value": "30.90"
         },
         {
           "@type": "PropertyValue",
           "name": "Cash Tendered",
-          "value": "50.00",
-          "unitText": "MYR"
+          "unitText": "MYR",
+          "value": "51.00"
         },
         {
           "@type": "PropertyValue",
           "name": "Change",
-          "value": "16.10",
-          "unitText": "MYR"
+          "unitText": "MYR",
+          "value": "20.10"
         },
         {
           "@type": "PropertyValue",
@@ -132,7 +132,7 @@
     {
       "@id": "#offer-1",
       "@type": "Offer",
-      "price": "19.00",
+      "price": "3.11",
       "priceCurrency": "MYR",
       "eligibleQuantity": {
         "@type": "QuantitativeValue",
@@ -140,27 +140,21 @@
         "unitText": "item"
       },
       "itemOffered": {
-        "@id": "#product-1"
+        "@id": "#item-1"
       },
       "seller": {
-        "@id": "#merchant-store"
+        "@id": "#merchant"
       }
     },
     {
-      "@id": "#product-1",
+      "@id": "#item-1",
       "@type": "Product",
-      "name": "CHOPPING BOARD 35.5X25.5CM 803M#",
-      "sku": "8970669",
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "Receipt Item Code",
-        "value": "EZ10HD05-24"
-      }
+      "name": "KILAT AUTO ECO WASH & SHINE ES1000 1L"
     },
     {
       "@id": "#offer-2",
       "@type": "Offer",
-      "price": "8.02",
+      "price": "4.62",
       "priceCurrency": "MYR",
       "eligibleQuantity": {
         "@type": "QuantitativeValue",
@@ -168,27 +162,21 @@
         "unitText": "item"
       },
       "itemOffered": {
-        "@id": "#product-2"
+        "@id": "#item-2"
       },
       "seller": {
-        "@id": "#merchant-store"
+        "@id": "#merchant"
       }
     },
     {
-      "@id": "#product-2",
+      "@id": "#item-2",
       "@type": "Product",
-      "name": "AIR PRESSURE SPRAYER SX-575-1 1.5L",
-      "sku": "9066468",
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "Receipt Item Code",
-        "value": "HC03-7-15"
-      }
+      "name": "KILAT ECO AUTO WASH & WAX EW-1000-1L"
     },
     {
       "@id": "#offer-3",
       "@type": "Offer",
-      "price": "3.02",
+      "price": "11.23",
       "priceCurrency": "MYR",
       "eligibleQuantity": {
         "@type": "QuantitativeValue",
@@ -196,27 +184,21 @@
         "unitText": "item"
       },
       "itemOffered": {
-        "@id": "#product-3"
+        "@id": "#item-3"
       },
       "seller": {
-        "@id": "#merchant-store"
+        "@id": "#merchant"
       }
     },
     {
-      "@id": "#product-3",
+      "@id": "#item-3",
       "@type": "Product",
-      "name": "WAXCO WINDSHILED CLEANER 120ML",
-      "gtin13": "9557031100236",
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "Receipt Item Code",
-        "value": "WA14-3A-48"
-      }
+      "name": "WD40 277ML"
     },
     {
       "@id": "#offer-4",
       "@type": "Offer",
-      "price": "3.88",
+      "price": "7.45",
       "priceCurrency": "MYR",
       "eligibleQuantity": {
         "@type": "QuantitativeValue",
@@ -224,22 +206,38 @@
         "unitText": "item"
       },
       "itemOffered": {
-        "@id": "#product-4"
+        "@id": "#item-4"
       },
       "seller": {
-        "@id": "#merchant-store"
+        "@id": "#merchant"
       }
     },
     {
-      "@id": "#product-4",
+      "@id": "#item-4",
       "@type": "Product",
-      "name": "BOPP TAPE 48MM*100M CLEAR",
-      "gtin13": "6935818350846",
-      "identifier": {
-        "@type": "PropertyValue",
-        "name": "Receipt Item Code",
-        "value": "FZ-04-36"
+      "name": "KLEENSO AJAIB 99 SERAI WANGI 500G"
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "4.50",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-5"
+      },
+      "seller": {
+        "@id": "#merchant"
       }
+    },
+    {
+      "@id": "#item-5",
+      "@type": "Product",
+      "name": "HANDKERCHIEF"
     }
   ]
 }

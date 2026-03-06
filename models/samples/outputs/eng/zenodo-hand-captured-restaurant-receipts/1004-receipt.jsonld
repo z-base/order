@@ -1,0 +1,148 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "GOLDEN BOWL TERIYAKI",
+      "telephone": "+1-562-928-8999",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8610 Garfield Ave.",
+        "addressLocality": "South Gate",
+        "addressRegion": "CA",
+        "postalCode": "90280"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "000141",
+      "orderDate": "2019-05-18T11:19:00",
+      "priceCurrency": "USD",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Register",
+          "value": "REG"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Manager Terminal",
+          "value": "Manager1 MC #01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Dining Mode",
+          "value": "HERE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "USD",
+          "value": "1.40"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "USD",
+          "value": "15.03"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "unitText": "USD",
+          "value": "20.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "unitText": "USD",
+          "value": "4.97"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "9.39",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "#1 CHKN PLATE"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "1.95",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "+ AVOCADO"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "2.29",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "MenuItem",
+      "name": "MD. DRINK"
+    }
+  ]
+}

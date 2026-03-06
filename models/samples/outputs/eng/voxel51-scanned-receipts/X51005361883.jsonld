@@ -1,0 +1,159 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "TEO HENG STATIONERY & BOOKS",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "Company Registration Number",
+          "value": "001451637-M"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Number",
+          "value": "000683913856"
+        }
+      ],
+      "telephone": "03-3271 9872",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 63, Jalan BBSAR",
+        "postalCode": "45600",
+        "addressRegion": "Selangor Darul Ehsan"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CS1801/26874",
+      "orderDate": "2018-01-18",
+      "priceCurrency": "MYR",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "SIMPLIFIED TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 2
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal (EX)",
+          "unitText": "MYR",
+          "value": "4.60"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Tax",
+          "unitText": "MYR",
+          "value": "0.28"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding",
+          "unitText": "MYR",
+          "value": "0.02"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "MYR",
+          "value": "4.90"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "unitText": "MYR",
+          "value": "4.90"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "unitText": "MYR",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary SR Amount",
+          "unitText": "MYR",
+          "value": "4.60"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary SR Tax",
+          "unitText": "MYR",
+          "value": "0.28"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "GOODS SOLD ARE NOT RETURNABLE."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "3.30",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "JIANYU STELL RULER 30CM THICK",
+      "gtin13": "9557068000035"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "1.30",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "Product",
+      "name": "LAMINATE FILM"
+    }
+  ]
+}

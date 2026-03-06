@@ -1,0 +1,138 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "FastFoodRestaurant",
+      "name": "Taco Bell",
+      "telephone": "+1-317-541-1897",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7230 Pendleton Pike",
+        "addressRegion": "IN",
+        "postalCode": "46226"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "37875",
+      "orderDate": "2016-09-01",
+      "priceCurrency": "USD",
+      "paymentMethod": "https://schema.org/Visa",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "DAJA"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Service Mode",
+          "value": "Drive Thru"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Survey Code",
+          "value": "0279-4033-2011-1203"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Card Account Last 4",
+          "value": "2276"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Approval Code",
+          "value": "571883"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "USD",
+          "value": "6.98"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "USD",
+          "value": "0.63"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "USD",
+          "value": "7.61"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "4.99",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "Power Veg Bowl",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "No Sour Cream",
+          "value": true
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "No Cheese",
+          "value": true
+        }
+      ]
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "1.99",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "Rg Orange Crush Fz"
+    }
+  ]
+}

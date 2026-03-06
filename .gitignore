@@ -24,3 +24,6 @@ __pycache__/
 *.pyc
 
 tmp/
+
+# Partial download artifacts from receipt dataset acquisition
+models/data/downloaded_*/**/archives/*.part-*

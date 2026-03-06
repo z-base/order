@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Order",
+  "orderNumber": "12345",
+  "orderDate": "2019-02-22",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Merchant Code",
+      "value": "0123456"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Transaction Type",
+      "value": "PARCHASE"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Payment Condition",
+      "value": "123"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Sequence Number",
+      "value": "7890"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Amount",
+      "value": "12.34"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Tax/Others",
+      "value": "0.00"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Total",
+      "value": "12.34"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Approval Code",
+      "value": "0001111"
+    }
+  ]
+}

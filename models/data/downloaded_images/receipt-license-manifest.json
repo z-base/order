@@ -18,9 +18,7 @@
       "title": "mahmoud2019/ReceiptQA",
       "sourceType": "huggingface",
       "language": "ara",
-      "languages": [
-        "ara"
-      ],
+      "languages": ["ara"],
       "license": "MIT",
       "evidencePath": "licenses/ara/mahmoud2019-receiptqa.json",
       "totalAvailable": 6,
@@ -754,9 +752,7 @@
       "title": "Lakshmiperumal/scanned_receipts",
       "sourceType": "huggingface",
       "language": "eng",
-      "languages": [
-        "eng"
-      ],
+      "languages": ["eng"],
       "license": "CC-BY-4.0",
       "evidencePath": "licenses/eng/lakshmiperumal-scanned-receipts.json",
       "totalAvailable": 713,
@@ -1562,9 +1558,7 @@
           "mediaType": "application/octet-stream"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 713 files)."
-      ],
+      "skipped": ["Limit reached (80 of 713 files)."],
       "notes": "Scanned receipt images from the FiftyOne mirror."
     },
     {
@@ -1572,9 +1566,7 @@
       "title": "Saran-R12/Receipts",
       "sourceType": "huggingface",
       "language": "eng",
-      "languages": [
-        "eng"
-      ],
+      "languages": ["eng"],
       "license": "Apache-2.0",
       "evidencePath": "licenses/eng/saran-r12-receipts.json",
       "totalAvailable": 1,
@@ -1948,9 +1940,7 @@
       "title": "Voxel51/scanned_receipts",
       "sourceType": "huggingface",
       "language": "eng",
-      "languages": [
-        "eng"
-      ],
+      "languages": ["eng"],
       "license": "CC-BY-4.0",
       "evidencePath": "licenses/eng/voxel51-scanned-receipts.json",
       "totalAvailable": 713,
@@ -2756,9 +2746,7 @@
           "mediaType": "application/octet-stream"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 713 files)."
-      ],
+      "skipped": ["Limit reached (80 of 713 files)."],
       "notes": "Primarily English scanned receipt images from the SROIE mirror."
     },
     {
@@ -2766,9 +2754,7 @@
       "title": "Zenodo hand-captured restaurant receipts",
       "sourceType": "direct",
       "language": "eng",
-      "languages": [
-        "eng"
-      ],
+      "languages": ["eng"],
       "license": "CC-BY-4.0",
       "evidencePath": "licenses/eng/zenodo-hand-captured-restaurant-receipts.json",
       "totalAvailable": 1,
@@ -3502,9 +3488,7 @@
       "title": "Voxel51/consolidated_receipt_dataset",
       "sourceType": "huggingface",
       "language": "ind",
-      "languages": [
-        "ind"
-      ],
+      "languages": ["ind"],
       "license": "CC-BY-4.0",
       "evidencePath": "licenses/ind/voxel51-consolidated-receipt-dataset.json",
       "totalAvailable": 801,
@@ -4310,9 +4294,7 @@
           "mediaType": "application/octet-stream"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 801 files)."
-      ],
+      "skipped": ["Limit reached (80 of 801 files)."],
       "notes": "Indonesian receipt dataset mirrored through FiftyOne."
     },
     {
@@ -4320,9 +4302,7 @@
       "title": "HumynLabs/Korean_Receipts_Dataset",
       "sourceType": "huggingface",
       "language": "kor",
-      "languages": [
-        "kor"
-      ],
+      "languages": ["kor"],
       "license": "CC-BY-4.0",
       "evidencePath": "licenses/kor/humynlabs-korean-receipts-dataset.json",
       "totalAvailable": 20,
@@ -4536,9 +4516,7 @@
       "title": "cdek-ocr/receipt-ocr-ru",
       "sourceType": "huggingface",
       "language": "rus",
-      "languages": [
-        "rus"
-      ],
+      "languages": ["rus"],
       "license": "MIT",
       "evidencePath": "licenses/rus/cdek-ocr-receipt-ocr-ru.json",
       "totalAvailable": 988,
@@ -5344,9 +5322,7 @@
           "mediaType": "application/octet-stream"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 988 files)."
-      ],
+      "skipped": ["Limit reached (80 of 988 files)."],
       "notes": "Russian receipt OCR image dataset."
     },
     {
@@ -5354,9 +5330,7 @@
       "title": "CC1984/mall_receipt_extraction_dataset",
       "sourceType": "huggingface",
       "language": "zho",
-      "languages": [
-        "zho"
-      ],
+      "languages": ["zho"],
       "license": "MIT",
       "evidencePath": "licenses/zho/cc1984-mall-receipt-extraction-dataset.json",
       "totalAvailable": 994,
@@ -6162,9 +6136,7 @@
           "mediaType": "application/octet-stream"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 994 files)."
-      ],
+      "skipped": ["Limit reached (80 of 994 files)."],
       "notes": "Chinese mall receipt image dataset."
     }
   ]

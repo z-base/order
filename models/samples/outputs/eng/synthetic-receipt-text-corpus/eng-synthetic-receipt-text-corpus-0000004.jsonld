@@ -1,0 +1,179 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Riverstone Books",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4662 Main St",
+        "addressLocality": "Phoenix",
+        "addressRegion": "GA",
+        "postalCode": "90850"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-O000004",
+      "orderDate": "2022-07-24T08:29:13",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "Morgan"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment Method",
+          "value": "Mastercard"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "USD",
+          "value": "231.22"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "unitText": "USD",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "USD",
+          "value": "11.04"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tip",
+          "unitText": "USD",
+          "value": "3.27"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "USD",
+          "value": "245.53"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "28.90",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "14.45",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "AA Batteries",
+      "sku": "SKU-4441"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "161.12",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 4,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "40.28",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "Product",
+      "name": "Adhesive Tape",
+      "sku": "SKU-4112"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "41.20",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 4,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "10.30",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "Product",
+      "name": "Travel Mug",
+      "sku": "SKU-4061"
+    }
+  ]
+}

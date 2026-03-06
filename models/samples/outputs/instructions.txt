@@ -3,6 +3,7 @@ For each input `.txt` file, read the OCR-extracted receipt text and convert it i
 The output must represent the receipt primarily as a `schema:Order`, but you must also use other Schema.org types and properties wherever they fit naturally and correctly, not only for the top-level order. For example, use Schema.org objects such as `Store`, `Organization`, `PostalAddress`, `Person`, `Offer`, `Product`, `QuantitativeValue`, `PropertyValue`, `PriceSpecification`, `Invoice`, `Service`, and other Schema.org types whenever they are the best semantic fit.
 
 The output format must be valid JSON-LD. Use:
+
 - `"@context": "https://schema.org"`
 - either a single top-level object or `"@graph"` when multiple linked entities are needed
 
@@ -15,9 +16,22 @@ Do not silently invent corrected values.
 Only output corrected values when they are supported by real-world evidence.
 If a value cannot be validated with sufficient confidence, preserve the most faithful observed value or omit the field rather than hallucinating.
 
+Critical evidence-boundary rule:
+You MUST NOT add factual information that is absent from the receipt just because web search reveals it.
+Web search is only for validating or disambiguating receipt evidence, not for enriching the receipt with new facts.
+If a merchant website, canonical branch name, alternate company number, expanded address component, URL, or other fact is not present on the receipt, do not add it unless the receipt itself explicitly points to it.
+Do not add:
+
+- merchant URLs unless printed on the receipt
+- alternate registration numbers derived from a known company record
+- expanded branch names not shown on the receipt
+- inferred locality/country/postal detail that is not actually printed
+- normalized product details beyond what the receipt supports
+
 Grounding rule:
 Every important correction must be grounded in reality.
 Use web search to validate things such as:
+
 - merchant legal name
 - business registration identifiers
 - address
@@ -27,9 +41,14 @@ Use web search to validate things such as:
 - currency and country context
 - payment status context when obvious from the receipt
 
+Grounding boundary:
+Grounding can justify choosing between plausible readings of receipt evidence.
+Grounding does NOT justify adding extra fields or values that the receipt never contained.
+
 Schema rule:
 Use Schema.org objects wherever they fit, not just plain strings.
 Examples:
+
 - seller as `Store`, `Organization`, or `LocalBusiness`
 - address as `PostalAddress`
 - line items as `Offer`
@@ -37,9 +56,10 @@ Examples:
 - quantities as `QuantitativeValue`
 - ad hoc extracted facts as `PropertyValue`
 - totals as `PriceSpecification` when appropriate
-Choose the most semantically correct Schema.org structure possible.
+  Choose the most semantically correct Schema.org structure possible.
 
 Output quality rules:
+
 - Output only JSON-LD
 - Output valid JSON
 - Do not include markdown fences
@@ -50,8 +70,11 @@ Output quality rules:
 - Do not include provenance/debug/audit artifacts unless explicitly required
 - Prefer corrected canonical values over noisy OCR fragments when validated
 - Preserve uncertainty conservatively: do not overclaim
+- Prefer omission over enrichment when a fact is not directly evidenced by the receipt
+- Weak receipts are allowed; the output may be sparse if the receipt is sparse
 
 Receipt interpretation rules:
+
 - Treat the receipt as an `Order` by default unless another Schema.org type is clearly more appropriate in addition
 - Use `paymentStatus: "https://schema.org/PaymentComplete"` when the receipt clearly shows completed payment
 - Use the receipt merchant as the seller
@@ -63,12 +86,14 @@ Receipt interpretation rules:
 - Include cashier, member number, notices, and other leftover receipt facts as `additionalProperty` using `PropertyValue` when no better Schema.org property exists
 
 Conservatism rules:
+
 - If a customer name appears on the receipt but is not explicitly labeled, do not assert it as customer unless the evidence is strong
 - If a field is ambiguous, prefer omission over fabrication
 - If multiple corrections are possible, choose the one best supported by real-world evidence
 - Do not create fake IDs, fake addresses, fake companies, fake products, or fake interpretations
 
 Normalization rules:
+
 - Normalize dates to ISO 8601
 - Normalize currency codes where possible, e.g. `MYR`, `EUR`, `USD`
 - Normalize numbers as clean machine-readable strings or numbers as appropriate
@@ -77,6 +102,7 @@ Normalization rules:
 - Normalize GTIN / barcode values when supported by the receipt and real-world context
 
 Reference material for structure:
+
 - https://schema.org/Order
 - https://schema.org/PaymentComplete
 - https://www.w3.org/TR/json-ld11/
@@ -84,52 +110,52 @@ Reference material for structure:
 
 Example style target:
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@id": "#merchant",
-      "@type": "Store",
-      "name": "Example Merchant",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Example Street",
-        "addressLocality": "Example City",
-        "postalCode": "12345",
-        "addressCountry": "US"
-      }
-    },
-    {
-      "@id": "#order",
-      "@type": "Order",
-      "seller": {
-        "@id": "#merchant"
-      },
-      "orderNumber": "ABC123",
-      "orderDate": "2024-01-31T14:52:00",
-      "priceCurrency": "USD",
-      "paymentStatus": "https://schema.org/PaymentComplete",
-      "acceptedOffer": [
-        {
-          "@id": "#offer-1"
-        }
-      ]
-    },
-    {
-      "@id": "#offer-1",
-      "@type": "Offer",
-      "price": "12.99",
-      "priceCurrency": "USD",
-      "eligibleQuantity": {
-        "@type": "QuantitativeValue",
-        "value": 1,
-        "unitText": "pc"
-      },
-      "itemOffered": {
-        "@type": "Product",
-        "name": "Example Product"
-      }
-    }
-  ]
+"@context": "https://schema.org",
+"@graph": [
+{
+"@id": "#merchant",
+"@type": "Store",
+"name": "Example Merchant",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "123 Example Street",
+"addressLocality": "Example City",
+"postalCode": "12345",
+"addressCountry": "US"
+}
+},
+{
+"@id": "#order",
+"@type": "Order",
+"seller": {
+"@id": "#merchant"
+},
+"orderNumber": "ABC123",
+"orderDate": "2024-01-31T14:52:00",
+"priceCurrency": "USD",
+"paymentStatus": "https://schema.org/PaymentComplete",
+"acceptedOffer": [
+{
+"@id": "#offer-1"
+}
+]
+},
+{
+"@id": "#offer-1",
+"@type": "Offer",
+"price": "12.99",
+"priceCurrency": "USD",
+"eligibleQuantity": {
+"@type": "QuantitativeValue",
+"value": 1,
+"unitText": "pc"
+},
+"itemOffered": {
+"@type": "Product",
+"name": "Example Product"
+}
+}
+]
 }
 
 Your objective is:

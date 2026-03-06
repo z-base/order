@@ -1,0 +1,179 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Beacon Pet Shop",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2480 River Rd",
+        "addressLocality": "Austin",
+        "addressRegion": "AZ",
+        "postalCode": "27742"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-0000001",
+      "orderDate": "2023-12-20T20:29:06",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "Jordan"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment Method",
+          "value": "Debit"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "USD",
+          "value": "233.31"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "unitText": "USD",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "USD",
+          "value": "21.05"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tip",
+          "unitText": "USD",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "USD",
+          "value": "254.36"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "75.45",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "25.15",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "Safety Gloves",
+      "sku": "SKU-2790"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "100.26",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "33.42",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "Product",
+      "name": "USB-C Cable",
+      "sku": "SKU-2883"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "57.60",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 3,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "19.20",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "Product",
+      "name": "Paper Towels",
+      "sku": "SKU-5574"
+    }
+  ]
+}

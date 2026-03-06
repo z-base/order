@@ -18,9 +18,7 @@
       "title": "receiptline/receiptline examples",
       "sourceType": "github",
       "language": "eng",
-      "languages": [
-        "eng"
-      ],
+      "languages": ["eng"],
       "license": "Apache-2.0",
       "evidencePath": "licenses/eng/receiptline-examples.json",
       "totalAvailable": 22,

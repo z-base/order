@@ -10,16 +10,6 @@
           "@type": "PropertyValue",
           "name": "Company Registration Number",
           "value": "789417-W"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Company Registration Number (compact)",
-          "value": "789417W"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "Malaysia company number",
-          "value": "200701031390"
         }
       ],
       "address": {
@@ -27,8 +17,7 @@
         "streetAddress": "No. 53, 55, 57 & 59, Jalan Sagu 18, Taman Daya",
         "postalCode": "81100",
         "addressLocality": "Johor Bahru",
-        "addressRegion": "Johor",
-        "addressCountry": "MY"
+        "addressRegion": "Johor"
       }
     },
     {
