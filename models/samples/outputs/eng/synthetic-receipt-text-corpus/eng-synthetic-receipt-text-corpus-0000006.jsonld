@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Willow Bakery",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4727 Cedar Lane",
+        "addressLocality": "Seattle",
+        "addressRegion": "MA",
+        "postalCode": "68968"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-0000006",
+      "orderDate": "2024-01-20T10:05:59",
+      "priceCurrency": "GBP",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "Jamie"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment Method",
+          "value": "Card"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "GBP",
+          "value": "29.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "unitText": "GBP",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "GBP",
+          "value": "2.41"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tip",
+          "unitText": "GBP",
+          "value": "10.09"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "GBP",
+          "value": "42.30"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "29.80",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "Ground Coffee",
+      "sku": "SKU-3749"
+    }
+  ]
+}

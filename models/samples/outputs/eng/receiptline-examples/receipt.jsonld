@@ -1,0 +1,114 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Ichigaya Terminal",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1-Y-X Kudan",
+        "addressLocality": "Chiyoda-ku"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "RECEIPT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "185.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "200.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "14.20"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "13.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "6.50",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "BEER"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "172.80",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "86.40",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "CHIDORI"
+    }
+  ]
+}

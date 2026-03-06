@@ -1,0 +1,217 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Friendly Red's of Windham",
+      "telephone": "+1-603-437-7251",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "22 Haverhill Rd",
+        "addressLocality": "Windham",
+        "addressRegion": "NH"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderDate": "2018-07-21T12:56:00",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        },
+        {
+          "@id": "#offer-5"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Server",
+          "value": "Giancarlo"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Check Reference",
+          "value": "104/1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Guests",
+          "value": 2
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Reference Number",
+          "value": "10076"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Reprint Number",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "value": "71.40"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "value": "6.43"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "77.83"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Balance Due",
+          "value": "77.83"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "28.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "14.00",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "Cadillac Margarita",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Variant",
+        "value": "Patron Silver"
+      }
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "14.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "Maryland Crab Cakes"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "12.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "MenuItem",
+      "name": "Chicken Caprese"
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "10.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-4",
+      "@type": "MenuItem",
+      "name": "Chix Parm Sandwich"
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "7.40",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "3.70",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-5"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-5",
+      "@type": "MenuItem",
+      "name": "Bud Light"
+    }
+  ]
+}

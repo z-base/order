@@ -1,0 +1,188 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "GRAND LUX CAFE"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "0480",
+      "orderDate": "2015-04-25",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Branch",
+          "value": "Roosevelt Field"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Table",
+          "value": "101"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Party Size",
+          "value": 3
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Server",
+          "value": "STEPHEN R"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Server Check",
+          "value": "4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "value": "63.75"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "value": "5.50"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "69.25"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Gratuity Notice",
+          "value": "Gratuity Not Included"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Suggested Gratuity 20%",
+          "value": "13.85"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Suggested Gratuity 18%",
+          "value": "12.47"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Suggested Gratuity 15%",
+          "value": "10.39"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "5.90",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "2.95",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "Coffee"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "17.95",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "Chicken Parmesan"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "25.95",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "MenuItem",
+      "name": "Prime Top Sirloin"
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "13.95",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-4",
+      "@type": "MenuItem",
+      "name": "The Bacon-Cheese Burger"
+    }
+  ]
+}

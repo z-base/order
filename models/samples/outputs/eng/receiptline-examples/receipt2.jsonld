@@ -1,0 +1,62 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Ichigaya Terminal",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Registration Number",
+        "value": "T0123456789012"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "1234",
+      "orderDate": "2022-11-09",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "RECEIPT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Amount Received",
+          "value": "120.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Note",
+          "value": "Meals, Goods (reduced tax rate)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Rate 8% Taxable Amount",
+          "value": "10.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Rate 8% Tax",
+          "value": "0.80"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Rate 10% Taxable Amount",
+          "value": "100.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Rate 10% Tax",
+          "value": "10.00"
+        }
+      ]
+    }
+  ]
+}

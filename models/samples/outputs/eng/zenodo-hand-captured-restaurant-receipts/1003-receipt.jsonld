@@ -1,0 +1,112 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "El Gran Mar de Plata",
+      "telephone": "+1-305-386-6638",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "10325 Hammocks Blvd",
+        "addressLocality": "Miami",
+        "addressRegion": "FL",
+        "postalCode": "33176"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "8262",
+      "orderDate": "2017-04-20T22:13:17",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Server",
+          "value": "Kayra"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Station",
+          "value": "10"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Service Mode",
+          "value": "Dine In"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Bar Tab",
+          "value": "Bar Tab"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "value": "5.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Sales Tax",
+          "value": "0.35"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "5.35"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "5.35"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Balance",
+          "value": "0.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Ticket Number",
+          "value": "35"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Settled At",
+          "value": "2017-04-20T22:13:25"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "5.00",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "Miller Lite"
+    }
+  ]
+}

@@ -31,6 +31,7 @@
     "README.md"
   ],
   "scripts": {
+    "models:samples:outputs:count": "node models/scripts/get-outputs-sample-count.mjs",
     "download:receipt-images": "node models/scripts/download-receipt-images.mjs",
     "download:receipt-pdfs": "node models/scripts/download-receipt-pdfs.mjs",
     "download:receipt-texts": "node models/scripts/download-receipt-texts.mjs",
