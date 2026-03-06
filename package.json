@@ -59,7 +59,7 @@
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
     "@playwright/test": "^1.58.2",
-    "@types/node": "^25.3.3",
+    "@types/node": "^25.3.5",
     "c8": "^11.0.0",
     "fast-glob": "^3.3.3",
     "husky": "^9.1.7",
@@ -73,6 +73,7 @@
     "@z-base/cryptosuite": "^1.0.1",
     "@z-base/zero-knowledge-credentials": "^1.0.2",
     "franc": "^6.2.0",
+    "sharp": "^0.34.5",
     "tesseract.js": "^7.0.0"
   }
 }

@@ -1,7 +1,7 @@
 # Receipt Download Report
-Generated: 2026-03-05T18:16:42.060Z
+Generated: 2026-03-06T08:59:59.937Z
 
-Output: data\images
+Output: models\data\source_images
 Scope: limited to 80
 
 | Source | License | Files | Languages | Notes | Evidence |

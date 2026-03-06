@@ -1,0 +1,21 @@
+:
+3 Cilantro mohandssin 2
+| Outlet: Mohandssin =x
+oo Table: T1 Date: 04/01/2022
+
+4 Guests: 1 ~ Shift Afternoon “NY
+| Order Type: Take Away  Serial# 619144
+Pe Taken by: 3796 k"
+41 Opening Time: 07:56 PM
+
+i 26.32
+Blueberry Muffin
+26.32
+Sub Total 3 68
+* VAT 3
+30.
+Balance Due
+: For feedback call 01 201 ph
+: Commercial Reg 63.005
+Tax Record © VV"
+- pe 23

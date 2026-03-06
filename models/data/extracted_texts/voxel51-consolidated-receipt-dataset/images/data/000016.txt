@@ -1,0 +1,6 @@
+wus -TICKET CP 20,000
+Subtotal 30,000
+
+TOTAL (Oty~1.00)30,000
+
+EOC BCA 31,000
