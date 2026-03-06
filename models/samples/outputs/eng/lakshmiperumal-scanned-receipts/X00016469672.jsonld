@@ -1,0 +1,341 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "SOON HUAT MACHINERY ENTERPRISE",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Company Registration Number",
+        "value": "JM0352019-K"
+      },
+      "taxID": "002116837376",
+      "telephone": "07-5547360",
+      "faxNumber": "07-5624059",
+      "email": "soonhuat2000@hotmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 53, Jalan Putra 1, Taman Sri Putra",
+        "postalCode": "81200",
+        "addressLocality": "Johor Bahru",
+        "addressRegion": "Johor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CS00004040",
+      "orderDate": "2019-01-11T09:44:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        },
+        {
+          "@id": "#offer-5"
+        },
+        {
+          "@id": "#offer-6"
+        },
+        {
+          "@id": "#offer-7"
+        },
+        {
+          "@id": "#offer-8"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "CASH SALES"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "USER"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 9
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Sales",
+          "value": "327.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash",
+          "value": "327.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "Goods sold are not returnable, thank you."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "80.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "service"
+      },
+      "itemOffered": {
+        "@id": "#service-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#service-1",
+      "@type": "Service",
+      "name": "REPAIR ENGINE POWER SPRAYER (1 UNIT) WORKMANSHIP & SERVICE",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "1072"
+      }
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "160.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "GIANT 608 OVERFLOW ASSY",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "70549"
+      }
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "17.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-2",
+      "@type": "Product",
+      "name": "ENGINE OIL",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "1071"
+      }
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "10.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-3",
+      "@type": "Product",
+      "name": "GREASE FOR TOOLS 40ML (AKODA)",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "70791"
+      }
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "6.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-4",
+      "@type": "Product",
+      "name": "EY20 PLUG CHAMPION",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "70637"
+      }
+    },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "8.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-5"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-5",
+      "@type": "Product",
+      "name": "STARTER TALI",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "1643"
+      }
+    },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "10.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-6"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-6",
+      "@type": "Product",
+      "name": "EY20 STARTER HANDLE",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "70197"
+      }
+    },
+    {
+      "@id": "#offer-8",
+      "@type": "Offer",
+      "price": "36.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-7"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "18.00",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-7",
+      "@type": "Product",
+      "name": "HD40 1L COTIN",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "70861"
+      }
+    }
+  ]
+}

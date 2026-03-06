@@ -1,0 +1,497 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "ASIA MART",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Company Registration Number",
+        "value": "SA0264195-T"
+      },
+      "taxID": "001609584640",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 23, Batu 10, Taman Sentosa, Jalan Kapar",
+        "postalCode": "42200",
+        "addressLocality": "Klang",
+        "addressRegion": "Selangor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CS02070163",
+      "orderDate": "2017-12-22T00:06:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        },
+        {
+          "@id": "#offer-5"
+        },
+        {
+          "@id": "#offer-6"
+        },
+        {
+          "@id": "#offer-7"
+        },
+        {
+          "@id": "#offer-8"
+        },
+        {
+          "@id": "#offer-9"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "EIRA"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Salesperson",
+          "value": "EIRA"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 25
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Sales Excluding GST",
+          "value": "31.03",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total GST",
+          "value": "1.65",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding",
+          "value": "0.02",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Sales Including GST",
+          "value": "32.70",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "40.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "7.30",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary SR Amount",
+          "value": "27.48",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary ZRL Amount",
+          "value": "3.55",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "Goods sold are not returnable, thank you."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "15.25",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 17,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "0.85",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "0.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "DELICIA CHOCOLATE 50G",
+      "gtin13": "9556641320027"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "3.55",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "3.55",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "ZRL"
+        }
+      ]
+    },
+    {
+      "@id": "#product-2",
+      "@type": "Product",
+      "name": "GARDENIA ORIGINAL CLASSIC JUMBO 600G",
+      "gtin13": "9556231110045"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "1.50",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "1.41",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "1.50",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-3",
+      "@type": "Product",
+      "name": "HU'S LIME 50G",
+      "gtin13": "9556127101331"
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "1.51",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "1.42",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "1.51",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "1.51",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "1.42",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "1.51",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-4",
+      "@type": "Product",
+      "name": "DOREMON CATCAT JOY 15G",
+      "gtin13": "8850199320722"
+    },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "2.44",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-5"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "2.30",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "2.44",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "2.44",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-5"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "2.30",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "2.44",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-5",
+      "@type": "Product",
+      "name": "MINUTE MAID PULPY ORANGE 350ML",
+      "gtin13": "8888002188511"
+    },
+    {
+      "@id": "#offer-8",
+      "@type": "Offer",
+      "price": "1.60",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-6"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-6",
+      "@type": "Product",
+      "name": "TINGE LEMON DRINK 500ML"
+    },
+    {
+      "@id": "#offer-9",
+      "@type": "Offer",
+      "price": "2.90",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-7"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "2.74",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price Including GST",
+          "value": "2.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-7",
+      "@type": "Product",
+      "name": "100 PLUS 1.5L",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Printed Barcode",
+        "value": "955657031213"
+      }
+    }
+  ]
+}

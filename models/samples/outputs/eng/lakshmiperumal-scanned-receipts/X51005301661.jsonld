@@ -1,0 +1,214 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "LIGHTROOM GALLERY SDN BHD",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Company Registration Number",
+        "value": "1072825-A"
+      },
+      "telephone": "03-33624395",
+      "faxNumber": "03-33624395",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 28, Jalan Astana 1C, Bandar Bukit Raja",
+        "postalCode": "41050",
+        "addressLocality": "Klang",
+        "addressRegion": "Selangor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "LCS03908",
+      "orderDate": "2017-12-20T19:10:35",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Station",
+          "value": "CASHIER"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "ANGELA"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cover",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Closed Bill Time",
+          "value": "2017-12-20T19:10:51"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "value": "68.87",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Service Charge",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST 6%",
+          "value": "4.13",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "73.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "73.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Item Count",
+          "value": 2
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Quantity Count",
+          "value": 3
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "Goods sold are not refundable, returnable."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Closing Message",
+          "value": "Thank you, please come again."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "2.83",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Item Code",
+          "value": "CH50514"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Tax Amount",
+          "value": "0.17",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "T5 JOINT 2PIN 2PCS"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "66.04",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Item Code",
+          "value": "YT51874"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "33.02",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Tax Amount",
+          "value": "3.96",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax Code",
+          "value": "SR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-2",
+      "@type": "Product",
+      "name": "YE30 BK 7W WW LED TRACK LIGHT"
+    }
+  ]
+}
