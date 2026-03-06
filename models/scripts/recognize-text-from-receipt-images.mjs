@@ -94,7 +94,11 @@ function outputTextPathFromRelative(relativeInputPath, outputRoot) {
   return path.join(outputRoot, parsed.dir, `${parsed.name}.txt`)
 }
 
-function outputPdfPagePathFromRelative(relativeInputPath, pageIndex, outputRoot) {
+function outputPdfPagePathFromRelative(
+  relativeInputPath,
+  pageIndex,
+  outputRoot
+) {
   const parsed = path.parse(relativeInputPath)
   const directory = path.join(outputRoot, parsed.dir, parsed.name)
   return path.join(directory, `page-${String(pageIndex).padStart(3, '0')}.txt`)
@@ -173,14 +177,18 @@ async function renderPdfPages(inputPath, pdfRenderer) {
   if (!pdfRenderer) return []
 
   const pdfBuffer = await fs.readFile(inputPath)
-  const document = await pdfRenderer.pdfjs.getDocument({ data: pdfBuffer }).promise
+  const document = await pdfRenderer.pdfjs.getDocument({ data: pdfBuffer })
+    .promise
   const pageCount = document.numPages
   const renderedPages = []
 
   for (let pageIndex = 1; pageIndex <= pageCount; pageIndex += 1) {
     const page = await document.getPage(pageIndex)
     const viewport = page.getViewport({ scale: 2.0 })
-    const canvas = pdfRenderer.createCanvas(Math.ceil(viewport.width), Math.ceil(viewport.height))
+    const canvas = pdfRenderer.createCanvas(
+      Math.ceil(viewport.width),
+      Math.ceil(viewport.height)
+    )
     const context = canvas.getContext('2d')
     await page.render({ canvasContext: context, canvas, viewport }).promise
     renderedPages.push(canvas.toBuffer('image/png'))
@@ -256,7 +264,9 @@ print(json.dumps(written))
 async function normalizeImageForOcr(imagePath, imageProcessor) {
   if (!imageProcessor) return imagePath
 
-  const metadata = await imageProcessor(imagePath, { failOn: 'none' }).metadata()
+  const metadata = await imageProcessor(imagePath, {
+    failOn: 'none',
+  }).metadata()
   const width = Number(metadata.width || 0)
   const height = Number(metadata.height || 0)
   if (width <= 0 || height <= 0) return imagePath
@@ -300,7 +310,9 @@ async function run() {
   let skippedCount = 0
 
   if (!imageProcessor) {
-    console.log('Note: optional package "sharp" is not installed, so tiny-image normalization is disabled.')
+    console.log(
+      'Note: optional package "sharp" is not installed, so tiny-image normalization is disabled.'
+    )
   }
 
   try {
@@ -312,27 +324,47 @@ async function run() {
         if (ext === '.zip') {
           const tmpExtractDir = path.join(
             os.tmpdir(),
-            `receipt-ocr-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`,
+            `receipt-ocr-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`
           )
           try {
-            const extracted = await extractZipWithPython(inputPath, tmpExtractDir, options.includePdfs)
+            const extracted = await extractZipWithPython(
+              inputPath,
+              tmpExtractDir,
+              options.includePdfs
+            )
             for (const extractedPath of extracted) {
               const extractedExt = path.extname(extractedPath).toLowerCase()
-              const relativeInsideZip = path.relative(tmpExtractDir, extractedPath)
-              const virtualRelative = path.join(stripExtension(relativeInputPath), relativeInsideZip)
+              const relativeInsideZip = path.relative(
+                tmpExtractDir,
+                extractedPath
+              )
+              const virtualRelative = path.join(
+                stripExtension(relativeInputPath),
+                relativeInsideZip
+              )
 
               if (PDF_EXTS.has(extractedExt)) {
                 if (!pdfRenderer) {
                   skippedCount += 1
-                  failures.push(`${virtualRelative}: PDF renderer unavailable (install pdfjs-dist + canvas)`)
+                  failures.push(
+                    `${virtualRelative}: PDF renderer unavailable (install pdfjs-dist + canvas)`
+                  )
                   continue
                 }
 
                 const pages = await renderPdfPages(extractedPath, pdfRenderer)
-                for (let pageIndex = 0; pageIndex < pages.length; pageIndex += 1) {
+                for (
+                  let pageIndex = 0;
+                  pageIndex < pages.length;
+                  pageIndex += 1
+                ) {
                   const result = await worker.recognize(pages[pageIndex])
                   const text = cleanText(result?.data?.text ?? '')
-                  const destination = outputPdfPagePathFromRelative(virtualRelative, pageIndex + 1, outputRoot)
+                  const destination = outputPdfPagePathFromRelative(
+                    virtualRelative,
+                    pageIndex + 1,
+                    outputRoot
+                  )
                   await ensureDirectory(destination)
                   await fs.writeFile(destination, `${text}\n`)
                 }
@@ -341,10 +373,16 @@ async function run() {
                 continue
               }
 
-              const preparedImage = await normalizeImageForOcr(extractedPath, imageProcessor)
+              const preparedImage = await normalizeImageForOcr(
+                extractedPath,
+                imageProcessor
+              )
               const result = await worker.recognize(preparedImage)
               const text = cleanText(result?.data?.text ?? '')
-              const destination = outputTextPathFromRelative(virtualRelative, outputRoot)
+              const destination = outputTextPathFromRelative(
+                virtualRelative,
+                outputRoot
+              )
               await ensureDirectory(destination)
               await fs.writeFile(destination, `${text}\n`)
               successCount += 1
@@ -358,7 +396,9 @@ async function run() {
         if (ext === '.pdf') {
           if (!pdfRenderer) {
             skippedCount += 1
-            failures.push(`${relativeInputPath}: PDF renderer unavailable (install pdfjs-dist + canvas)`)
+            failures.push(
+              `${relativeInputPath}: PDF renderer unavailable (install pdfjs-dist + canvas)`
+            )
             continue
           }
 
@@ -371,7 +411,11 @@ async function run() {
           for (let i = 0; i < pages.length; i += 1) {
             const result = await worker.recognize(pages[i])
             const text = cleanText(result?.data?.text ?? '')
-            const destination = outputPdfPagePathFromRelative(relativeInputPath, i + 1, outputRoot)
+            const destination = outputPdfPagePathFromRelative(
+              relativeInputPath,
+              i + 1,
+              outputRoot
+            )
             await ensureDirectory(destination)
             await fs.writeFile(destination, `${text}\n`)
           }
@@ -380,16 +424,24 @@ async function run() {
           continue
         }
 
-        const preparedImage = await normalizeImageForOcr(inputPath, imageProcessor)
+        const preparedImage = await normalizeImageForOcr(
+          inputPath,
+          imageProcessor
+        )
         const result = await worker.recognize(preparedImage)
         const text = cleanText(result?.data?.text ?? '')
-        const destination = outputTextPathFromRelative(relativeInputPath, outputRoot)
+        const destination = outputTextPathFromRelative(
+          relativeInputPath,
+          outputRoot
+        )
         await ensureDirectory(destination)
         await fs.writeFile(destination, `${text}\n`)
         successCount += 1
       } catch (error) {
         skippedCount += 1
-        failures.push(`${relativeInputPath}: ${error?.message ?? String(error)}`)
+        failures.push(
+          `${relativeInputPath}: ${error?.message ?? String(error)}`
+        )
       }
     }
   } finally {

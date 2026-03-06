@@ -820,9 +820,7 @@
           "mediaType": "image/jpeg"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 994 files)."
-      ],
+      "skipped": ["Limit reached (80 of 994 files)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -834,9 +832,7 @@
       "languages": [],
       "totalAvailable": 1,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -848,9 +844,7 @@
       "languages": [],
       "totalAvailable": 1,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -862,9 +856,7 @@
       "languages": [],
       "totalAvailable": 23,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -1982,9 +1974,7 @@
       "languages": [],
       "totalAvailable": 992,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3010,9 +3000,7 @@
           "mediaType": "image/jpeg"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 713 files)."
-      ],
+      "skipped": ["Limit reached (80 of 713 files)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3825,9 +3813,7 @@
           "mediaType": "image/png"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 801 files)."
-      ],
+      "skipped": ["Limit reached (80 of 801 files)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3839,9 +3825,7 @@
       "languages": [],
       "totalAvailable": 1,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3853,9 +3837,7 @@
       "languages": [],
       "totalAvailable": 993,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3867,9 +3849,7 @@
       "languages": [],
       "totalAvailable": 800,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3881,9 +3861,7 @@
       "languages": [],
       "totalAvailable": 347,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3895,9 +3873,7 @@
       "languages": [],
       "totalAvailable": 980,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3909,9 +3885,7 @@
       "languages": [],
       "totalAvailable": 988,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3923,9 +3897,7 @@
       "languages": [],
       "totalAvailable": 972,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3937,9 +3909,7 @@
       "languages": [],
       "totalAvailable": 40,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3951,9 +3921,7 @@
       "languages": [],
       "totalAvailable": 10,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3965,9 +3933,7 @@
       "languages": [],
       "totalAvailable": 5,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -3979,9 +3945,7 @@
       "languages": [],
       "totalAvailable": 200,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -4794,9 +4758,7 @@
           "mediaType": "image/jpeg"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 988 files)."
-      ],
+      "skipped": ["Limit reached (80 of 988 files)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -5609,9 +5571,7 @@
           "mediaType": "image/jpeg"
         }
       ],
-      "skipped": [
-        "Limit reached (80 of 713 files)."
-      ],
+      "skipped": ["Limit reached (80 of 713 files)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     },
     {
@@ -5637,9 +5597,7 @@
       "languages": [],
       "totalAvailable": 347,
       "downloadedFiles": [],
-      "skipped": [
-        "Skipped: non-permissive or unknown license (Unknown)."
-      ],
+      "skipped": ["Skipped: non-permissive or unknown license (Unknown)."],
       "notes": "Receipt dataset candidate from Hugging Face search."
     }
   ]

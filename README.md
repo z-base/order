@@ -158,72 +158,72 @@ yarn add @z-base/bytecodec
 ### Bytes wrapper
 
 ```js
-import { Bytes } from "@z-base/bytecodec";
+import { Bytes } from '@z-base/bytecodec'
 // The `Bytes` convenience class wraps the same functions as static methods.
-const encoded = Bytes.toBase64UrlString(new Uint8Array([1, 2, 3]));
+const encoded = Bytes.toBase64UrlString(new Uint8Array([1, 2, 3]))
 ```
 
 ### Base64URL
 
 ```js
-import { toBase64UrlString, fromBase64UrlString } from "@z-base/bytecodec";
+import { toBase64UrlString, fromBase64UrlString } from '@z-base/bytecodec'
 
-const bytes = new Uint8Array([104, 101, 108, 108, 111]);
-const encoded = toBase64UrlString(bytes); // string of base64url chars
-const decoded = fromBase64UrlString(encoded); // Uint8Array
+const bytes = new Uint8Array([104, 101, 108, 108, 111])
+const encoded = toBase64UrlString(bytes) // string of base64url chars
+const decoded = fromBase64UrlString(encoded) // Uint8Array
 ```
 
 ### UTF-8 strings
 
 ```js
-import { fromString, toString } from "@z-base/bytecodec";
+import { fromString, toString } from '@z-base/bytecodec'
 
-const textBytes = fromString("caffe and rockets"); // Uint8Array
-const text = toString(textBytes); // "caffe and rockets"
+const textBytes = fromString('caffe and rockets') // Uint8Array
+const text = toString(textBytes) // "caffe and rockets"
 ```
 
 ### JSON
 
 ```js
-import { fromJSON, toJSON } from "@z-base/bytecodec";
+import { fromJSON, toJSON } from '@z-base/bytecodec'
 
-const jsonBytes = fromJSON({ ok: true, count: 3 }); // Uint8Array
-const obj = toJSON(jsonBytes); // { ok: true, count: 3 }
+const jsonBytes = fromJSON({ ok: true, count: 3 }) // Uint8Array
+const obj = toJSON(jsonBytes) // { ok: true, count: 3 }
 ```
 
 ### Compression
 
 ```js
-import { toCompressed, fromCompressed } from "@z-base/bytecodec";
+import { toCompressed, fromCompressed } from '@z-base/bytecodec'
 
-const compressed = await toCompressed(new Uint8Array([1, 2, 3])); // Uint8Array
-const restored = await fromCompressed(compressed); // Uint8Array
+const compressed = await toCompressed(new Uint8Array([1, 2, 3])) // Uint8Array
+const restored = await fromCompressed(compressed) // Uint8Array
 ```
 
 ### Normalization
 
 ```js
-import { toUint8Array, toArrayBuffer, toBufferSource } from "@z-base/bytecodec";
+import { toUint8Array, toArrayBuffer, toBufferSource } from '@z-base/bytecodec'
 
-const normalized = toUint8Array([1, 2, 3]); // Uint8Array
-const copied = toArrayBuffer(normalized); // ArrayBuffer
-const bufferSource = toBufferSource(normalized); // Uint8Array as BufferSource
+const normalized = toUint8Array([1, 2, 3]) // Uint8Array
+const copied = toArrayBuffer(normalized) // ArrayBuffer
+const bufferSource = toBufferSource(normalized) // Uint8Array as BufferSource
 ```
 
 ### Equality
 
 ```js
-import { equals } from "@z-base/bytecodec";
+import { equals } from '@z-base/bytecodec'
 
-const isSame = equals(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2, 3])); // true | false
+const isSame = equals(new Uint8Array([1, 2, 3]), new Uint8Array([1, 2, 3])) // true | false
 ```
 
 ### Concatenating
 
 ```js
-import { concat } from "@z-base/bytecodec";
+import { concat } from '@z-base/bytecodec'
 
-const joined = concat([new Uint8Array([1, 2]), new Uint8Array([3, 4]), [5, 6]]); // Uint8Array
+const joined = concat([new Uint8Array([1, 2]), new Uint8Array([3, 4]), [5, 6]]) // Uint8Array
 ```
 
 ## Runtime behavior
@@ -321,12 +321,12 @@ yarn add @z-base/cryptosuite
 ### Cryptosuite wrapper
 
 ```ts
-import { Cryptosuite } from "@z-base/cryptosuite";
+import { Cryptosuite } from '@z-base/cryptosuite'
 // The `Cryptosuite` convenience class wraps classes and functions into an intuitive structure.
-const cipherJwk = await Cryptosuite.cipher.generateKey();
-const payload = new Uint8Array([1, 2, 3]);
-const artifact = await Cryptosuite.cipher.encrypt(cipherJwk, payload);
-const roundtrip = await Cryptosuite.cipher.decrypt(cipherJwk, artifact);
+const cipherJwk = await Cryptosuite.cipher.generateKey()
+const payload = new Uint8Array([1, 2, 3])
+const artifact = await Cryptosuite.cipher.encrypt(cipherJwk, payload)
+const roundtrip = await Cryptosuite.cipher.decrypt(cipherJwk, artifact)
 ```
 
 ### OpaqueIdentifier
@@ -337,39 +337,39 @@ import {
   generateOID,
   validateOID,
   type OpaqueIdentifier,
-} from "@z-base/cryptosuite";
+} from '@z-base/cryptosuite'
 
-const oid = await generateOID(); // 43 random base64url chars
-const derived = await deriveOID(idBytesFromSomewhere); // 43 deterministic base64url chars
-const valid = validateOID(uncontrolledOID); // 43 base64url chars | false
-if (!valid) return;
+const oid = await generateOID() // 43 random base64url chars
+const derived = await deriveOID(idBytesFromSomewhere) // 43 deterministic base64url chars
+const valid = validateOID(uncontrolledOID) // 43 base64url chars | false
+if (!valid) return
 ```
 
 ### Cipher
 
 ```ts
-import { fromJSON, toJSON } from "@z-base/bytecodec";
+import { fromJSON, toJSON } from '@z-base/bytecodec'
 import {
   deriveCipherKey,
   CipherCluster,
   CipherAgent,
   type CipherJWK,
-} from "@z-base/cryptosuite";
+} from '@z-base/cryptosuite'
 
-const cipherJwk = await deriveCipherKey(deterministicBytes);
+const cipherJwk = await deriveCipherKey(deterministicBytes)
 
-const state = { name: "Bob", email: "bob@email.com" };
-const enc = await CipherCluster.encrypt(cipherJwk, fromJSON(state)); // {iv, ciphertext}
-const dec = await CipherCluster.decrypt(cipherJwk, enc);
+const state = { name: 'Bob', email: 'bob@email.com' }
+const enc = await CipherCluster.encrypt(cipherJwk, fromJSON(state)) // {iv, ciphertext}
+const dec = await CipherCluster.decrypt(cipherJwk, enc)
 
-const restored = toJSON(dec);
-console.log(restored.name); // "Bob"
+const restored = toJSON(dec)
+console.log(restored.name) // "Bob"
 ```
 
 ### Exchange
 
 ```ts
-import { fromString, toString } from "@z-base/bytecodec";
+import { fromString, toString } from '@z-base/bytecodec'
 import {
   generateCipherKey,
   generateExchangePair,
@@ -380,39 +380,39 @@ import {
   type UnwrapJWK,
   CipherAgent,
   type CipherJWK,
-} from "@z-base/cryptosuite";
+} from '@z-base/cryptosuite'
 
-const { wrapJwk, unwrapJwk } = await generateExchangePair();
-const encryptJwk = await generateCipherKey();
-const encryptAgent = new CipherAgent(encryptJwk);
-const body = await encryptAgent.encrypt(fromString("Hello world!")); // {iv, ciphertext}
-const header = await ExchangeCluster.wrap(wrapJwk, encryptJwk); // ArrayBuffer
-const message = { header, body };
+const { wrapJwk, unwrapJwk } = await generateExchangePair()
+const encryptJwk = await generateCipherKey()
+const encryptAgent = new CipherAgent(encryptJwk)
+const body = await encryptAgent.encrypt(fromString('Hello world!')) // {iv, ciphertext}
+const header = await ExchangeCluster.wrap(wrapJwk, encryptJwk) // ArrayBuffer
+const message = { header, body }
 const decryptJwk = (await ExchangeCluster.unwrap(
   unwrapJwk,
-  message.header,
-)) as CipherJWK;
-const decryptAgent = new CipherAgent(decryptJwk);
-const decryptedBody = await decryptAgent.decrypt(message.body);
-const messageText = toString(decryptedBody); // "Hello world!"
+  message.header
+)) as CipherJWK
+const decryptAgent = new CipherAgent(decryptJwk)
+const decryptedBody = await decryptAgent.decrypt(message.body)
+const messageText = toString(decryptedBody) // "Hello world!"
 ```
 
 ### HMAC
 
 ```ts
-import { fromString } from "@z-base/bytecodec";
+import { fromString } from '@z-base/bytecodec'
 import {
   generateHMACKey,
   HMACCluster,
   HMACAgent,
   type HMACJWK,
-} from "@z-base/cryptosuite";
+} from '@z-base/cryptosuite'
 
-const hmacJwk = await generateHMACKey();
+const hmacJwk = await generateHMACKey()
 
-const challenge = crypto.getRandomValues(new Uint8Array(32));
-const sig = await HMACCluster.sign(hmacJwk, challenge); // ArrayBuffer
-const ok = await HMACCluster.verify(hmacJwk, challenge, sig); // true | false
+const challenge = crypto.getRandomValues(new Uint8Array(32))
+const sig = await HMACCluster.sign(hmacJwk, challenge) // ArrayBuffer
+const ok = await HMACCluster.verify(hmacJwk, challenge, sig) // true | false
 ```
 
 ### Verification
@@ -425,12 +425,12 @@ import {
   type SignJWK,
   VerifyAgent,
   type VerifyJWK,
-} from "@z-base/cryptosuite";
+} from '@z-base/cryptosuite'
 
-const { signJwk, verifyJwk } = await generateVerificationPair();
-const payload = new Uint8Array([9, 8, 7]);
-const sig = await VerificationCluster.sign(signJwk, payload); // ArrayBuffer
-const ok = await VerificationCluster.verify(verifyJwk, payload, sig); // true | false
+const { signJwk, verifyJwk } = await generateVerificationPair()
+const payload = new Uint8Array([9, 8, 7])
+const sig = await VerificationCluster.sign(signJwk, payload) // ArrayBuffer
+const ok = await VerificationCluster.verify(verifyJwk, payload, sig) // true | false
 ```
 
 ## Runtime behavior
@@ -526,48 +526,45 @@ import {
   ZKCredentials,
   type ZKCredential,
   type ZKCredentialErrorCode,
-} from "@z-base/zero-knowledge-credentials";
+} from '@z-base/zero-knowledge-credentials'
 
 await ZKCredentials.registerCredential(
-  "User display name",
-  "platform", // or 'cross-platform'
-);
+  'User display name',
+  'platform' // or 'cross-platform'
+)
 ```
 
 ### Discover a credential
 
 ```ts
-import { Bytes } from "@z-base/bytecodec";
-import { Cryptosuite } from "@z-base/cryptosuite";
-import { ZKCredentials } from "@z-base/zero-knowledge-credentials";
+import { Bytes } from '@z-base/bytecodec'
+import { Cryptosuite } from '@z-base/cryptosuite'
+import { ZKCredentials } from '@z-base/zero-knowledge-credentials'
 
-const root = await ZKCredentials.discoverCredential();
+const root = await ZKCredentials.discoverCredential()
 
-const id = root.id; // routing identifier / OpaqueIdentifier
-const hmacJwk = root.hmacJwk; // HMAC root key / HMACJWK
-const cipherJwk = root.cipherJwk; // AES-GCM root key / CipherJWK
+const id = root.id // routing identifier / OpaqueIdentifier
+const hmacJwk = root.hmacJwk // HMAC root key / HMACJWK
+const cipherJwk = root.cipherJwk // AES-GCM root key / CipherJWK
 
-const cache = await caches.open("opaque-blobs");
+const cache = await caches.open('opaque-blobs')
 
-let artifact = await cache.match(id); // {iv, ciphertext}
+let artifact = await cache.match(id) // {iv, ciphertext}
 
 if (!artifact) {
-  const challengeRaw = await fetch(`/api/v1/artifact/${id}/challenge`);
-  const challengeText = await challengeRaw.text();
-  const challengeBytes = Bytes.fromBase64UrlString(challengeText);
-  const signature = await Cryptosuite.hmac.sign(hmacJwk, challengeBytes);
+  const challengeRaw = await fetch(`/api/v1/artifact/${id}/challenge`)
+  const challengeText = await challengeRaw.text()
+  const challengeBytes = Bytes.fromBase64UrlString(challengeText)
+  const signature = await Cryptosuite.hmac.sign(hmacJwk, challengeBytes)
   const raw = await fetch(`/api/v1/artifact/${id}`, {
     headers: {
       Authorization: Bytes.toBase64UrlString(signature),
     },
-  });
-  artifact = await raw.json(); // {iv, ciphertext}
+  })
+  artifact = await raw.json() // {iv, ciphertext}
 }
 
-const accountCredentials = await Cryptosuite.cipher.decrypt(
-  cipherJwk,
-  artifact,
-);
+const accountCredentials = await Cryptosuite.cipher.decrypt(cipherJwk, artifact)
 
 // const {id, hmacJwk, cipherJwk} = accountCredentials
 // repeat...
@@ -577,25 +574,25 @@ const accountCredentials = await Cryptosuite.cipher.decrypt(
 ### Generate a credential
 
 ```ts
-import { Bytes } from "@z-base/bytecodec";
-import { Cryptosuite } from "@z-base/cryptosuite";
-import { ZKCredentials } from "@z-base/zero-knowledge-credentials";
+import { Bytes } from '@z-base/bytecodec'
+import { Cryptosuite } from '@z-base/cryptosuite'
+import { ZKCredentials } from '@z-base/zero-knowledge-credentials'
 
 const profile = {
-  name: "Bob",
+  name: 'Bob',
   preferences: {
-    theme: "dark",
+    theme: 'dark',
   },
-};
+}
 
-const credentials = await ZKCredentials.generateCredential();
+const credentials = await ZKCredentials.generateCredential()
 
-const id = credentials.id; // resource routing identifier / OpaqueIdentifier
-const hmacJwk = credentials.hmacJwk; // HMAC resource key / HMACJWK
-const cipherJwk = credentials.cipherJwk; // AES-GCM resource key / CipherJWK
+const id = credentials.id // resource routing identifier / OpaqueIdentifier
+const hmacJwk = credentials.hmacJwk // HMAC resource key / HMACJWK
+const cipherJwk = credentials.cipherJwk // AES-GCM resource key / CipherJWK
 
-const profileBytes = Bytes.fromJSON(profile);
-const artifact = await Cryptosuite.cipher.encrypt(cipherJwk, profileBytes);
+const profileBytes = Bytes.fromJSON(profile)
+const artifact = await Cryptosuite.cipher.encrypt(cipherJwk, profileBytes)
 fetch(
   `/api/v1/artifact/${id}`,
   JSON.stringify({
@@ -606,9 +603,9 @@ fetch(
     },
   }),
   {
-    method: "POST",
-  },
-);
+    method: 'POST',
+  }
+)
 ```
 
 ## Runtime behavior

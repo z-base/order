@@ -1,4 +1,0 @@
-https://schema.org/Order
-https://schema.org/PaymentComplete
-https://www.w3.org/TR/json-ld11/
-https://json-ld.org/spec/latest/

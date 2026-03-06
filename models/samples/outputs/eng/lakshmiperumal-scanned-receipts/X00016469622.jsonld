@@ -1,0 +1,139 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "YONGFATT ENTERPRISE",
+      "telephone": "07-3523888",
+      "taxID": "000849813504",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 122, 124, Jalan Dedap 13",
+        "postalCode": "81100",
+        "addressLocality": "Johor Bahru",
+        "addressRegion": "Johor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CS00031663",
+      "orderDate": "2018-12-25T12:31:00",
+      "priceCurrency": "MYR",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "SIMPLIFIED TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "USER"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment",
+          "value": "CASH"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Sales Excluding GST",
+          "value": "80.91",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total GST",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding",
+          "value": "-0.01",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Sales Inclusive of GST",
+          "value": "80.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "100.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "19.10",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Tax Code",
+          "value": "SR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Rate",
+          "value": "0%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "Goods sold are not refundable."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "80.91",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "ELEGANT SCH TR BAG 15",
+      "sku": "E8318"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+For each input `.txt` file, read the OCR-extracted receipt text and convert it into a corrected, normalized JSON-LD document using Schema.org.
+
+The output must represent the receipt primarily as a `schema:Order`, but you must also use other Schema.org types and properties wherever they fit naturally and correctly, not only for the top-level order. For example, use Schema.org objects such as `Store`, `Organization`, `PostalAddress`, `Person`, `Offer`, `Product`, `QuantitativeValue`, `PropertyValue`, `PriceSpecification`, `Invoice`, `Service`, and other Schema.org types whenever they are the best semantic fit.
+
+The output format must be valid JSON-LD. Use:
+- `"@context": "https://schema.org"`
+- either a single top-level object or `"@graph"` when multiple linked entities are needed
+
+Your task is not just transcription. Your task is semantic normalization of noisy OCR receipt text into real-world structured data.
+
+Critical correction rule:
+You MUST NOT guess OCR corrections from intuition alone.
+If merchant name, company number, address, product details, receipt number format, or other fields appear noisy or damaged, you must validate corrections using web search and real-world context before normalizing them.
+Do not silently invent corrected values.
+Only output corrected values when they are supported by real-world evidence.
+If a value cannot be validated with sufficient confidence, preserve the most faithful observed value or omit the field rather than hallucinating.
+
+Grounding rule:
+Every important correction must be grounded in reality.
+Use web search to validate things such as:
+- merchant legal name
+- business registration identifiers
+- address
+- branch names
+- product identifiers such as GTIN / barcode numbers
+- date/time plausibility when OCR is clearly damaged
+- currency and country context
+- payment status context when obvious from the receipt
+
+Schema rule:
+Use Schema.org objects wherever they fit, not just plain strings.
+Examples:
+- seller as `Store`, `Organization`, or `LocalBusiness`
+- address as `PostalAddress`
+- line items as `Offer`
+- purchased goods as `Product`
+- quantities as `QuantitativeValue`
+- ad hoc extracted facts as `PropertyValue`
+- totals as `PriceSpecification` when appropriate
+Choose the most semantically correct Schema.org structure possible.
+
+Output quality rules:
+- Output only JSON-LD
+- Output valid JSON
+- Do not include markdown fences
+- Do not include explanations
+- Do not include commentary
+- Do not include citations inside the JSON-LD
+- Do not include raw OCR blobs unless explicitly required
+- Do not include provenance/debug/audit artifacts unless explicitly required
+- Prefer corrected canonical values over noisy OCR fragments when validated
+- Preserve uncertainty conservatively: do not overclaim
+
+Receipt interpretation rules:
+- Treat the receipt as an `Order` by default unless another Schema.org type is clearly more appropriate in addition
+- Use `paymentStatus: "https://schema.org/PaymentComplete"` when the receipt clearly shows completed payment
+- Use the receipt merchant as the seller
+- Represent each purchased line item as an `Offer` linked to a `Product` or `Service`
+- Include order number / document number when present
+- Include order date in ISO 8601 format when it can be determined reliably
+- Include `priceCurrency`
+- Include totals, discounts, rounding adjustments, tendered cash, and change where present
+- Include cashier, member number, notices, and other leftover receipt facts as `additionalProperty` using `PropertyValue` when no better Schema.org property exists
+
+Conservatism rules:
+- If a customer name appears on the receipt but is not explicitly labeled, do not assert it as customer unless the evidence is strong
+- If a field is ambiguous, prefer omission over fabrication
+- If multiple corrections are possible, choose the one best supported by real-world evidence
+- Do not create fake IDs, fake addresses, fake companies, fake products, or fake interpretations
+
+Normalization rules:
+- Normalize dates to ISO 8601
+- Normalize currency codes where possible, e.g. `MYR`, `EUR`, `USD`
+- Normalize numbers as clean machine-readable strings or numbers as appropriate
+- Normalize merchant names to real-world canonical names when validated
+- Normalize addresses into structured postal address fields when validated
+- Normalize GTIN / barcode values when supported by the receipt and real-world context
+
+Reference material for structure:
+- https://schema.org/Order
+- https://schema.org/PaymentComplete
+- https://www.w3.org/TR/json-ld11/
+- https://json-ld.org/spec/latest/
+
+Example style target:
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Example Merchant",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Example Street",
+        "addressLocality": "Example City",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "ABC123",
+      "orderDate": "2024-01-31T14:52:00",
+      "priceCurrency": "USD",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "12.99",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "pc"
+      },
+      "itemOffered": {
+        "@type": "Product",
+        "name": "Example Product"
+      }
+    }
+  ]
+}
+
+Your objective is:
+Convert noisy OCR receipt text into the most semantically correct, real-world-validated, non-hallucinated Schema.org JSON-LD representation possible.

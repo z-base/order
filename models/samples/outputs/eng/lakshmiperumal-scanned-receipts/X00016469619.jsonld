@@ -1,0 +1,196 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Indah Gift & Home Deco",
+      "telephone": "07-3507405",
+      "faxNumber": "07-3558160",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "27, Jalan Dedap 13, Taman Johor Jaya",
+        "postalCode": "81100",
+        "addressLocality": "Johor Bahru",
+        "addressRegion": "Johor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderDate": "2018-10-19T20:49:59",
+      "priceCurrency": "MYR",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "RECEIPT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "CN"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Location/SP",
+          "value": "05/0531"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "MB",
+          "value": "M026588"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Room Number",
+          "value": "01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Reference",
+          "value": "050100035279"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 2
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Amount",
+          "value": "60.31",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding Adjustment",
+          "value": "-0.01",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Rounded",
+          "value": "60.30",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "70.30",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "10.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "Goods Sold Are Not Returnable"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Business Notice",
+          "value": "Dealing In Wholesale And Retail."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Closing Message",
+          "value": "Thank You ! Please Come Again !"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "10.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#service-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#service-1",
+      "@type": "Service",
+      "name": "ST-PRIVILEGE CARD/GD INDAH",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "88888"
+      }
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "55.90",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Line Amount",
+          "value": "55.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount Rate",
+          "value": "10.00%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount Amount",
+          "value": "5.59",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Net Line Total",
+          "value": "50.31",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "GF-TABLE LAMP/STITCH",
+      "sku": "62483"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant-org",
+      "@type": "Organization",
+      "name": "MR D.I.Y. (Johor) Sdn Bhd",
+      "url": "https://www.mrdiy.com/",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Company Registration Number",
+        "value": "933109-X"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lot 1851-A & 1851-B, Jalan KPB 6, Kawasan Perindustrian Balakong",
+        "postalCode": "43300",
+        "addressLocality": "Seri Kembangan",
+        "addressRegion": "Selangor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#merchant-store",
+      "@type": "Store",
+      "name": "MR D.I.Y. Tesco Tebrau",
+      "branchOf": {
+        "@id": "#merchant-org"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant-store"
+      },
+      "orderNumber": "R000027830",
+      "orderDate": "2019-01-12T21:13:00",
+      "priceCurrency": "MYR",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Store Code",
+          "value": "SH01"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Shift Code",
+          "value": "ZK09"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Register",
+          "value": "T4"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier Role",
+          "value": "Operator Trainee Cashier"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Items",
+          "value": 4
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 4
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "33.92",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding Adjustment",
+          "value": "-0.02",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Rounded",
+          "value": "33.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tendered",
+          "value": "50.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "16.10",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Exchange Notice",
+          "value": "Exchange are allowed within 7 days with receipt."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Refund Notice",
+          "value": "Strictly no cash refund."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "19.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant-store"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "CHOPPING BOARD 35.5X25.5CM 803M#",
+      "sku": "8970669",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "EZ10HD05-24"
+      }
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "8.02",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-2"
+      },
+      "seller": {
+        "@id": "#merchant-store"
+      }
+    },
+    {
+      "@id": "#product-2",
+      "@type": "Product",
+      "name": "AIR PRESSURE SPRAYER SX-575-1 1.5L",
+      "sku": "9066468",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "HC03-7-15"
+      }
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "3.02",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-3"
+      },
+      "seller": {
+        "@id": "#merchant-store"
+      }
+    },
+    {
+      "@id": "#product-3",
+      "@type": "Product",
+      "name": "WAXCO WINDSHILED CLEANER 120ML",
+      "gtin13": "9557031100236",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "WA14-3A-48"
+      }
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "3.88",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-4"
+      },
+      "seller": {
+        "@id": "#merchant-store"
+      }
+    },
+    {
+      "@id": "#product-4",
+      "@type": "Product",
+      "name": "BOPP TAPE 48MM*100M CLEAR",
+      "gtin13": "6935818350846",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "FZ-04-36"
+      }
+    }
+  ]
+}

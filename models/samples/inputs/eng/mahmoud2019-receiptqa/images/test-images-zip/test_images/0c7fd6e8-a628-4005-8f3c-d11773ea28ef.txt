@@ -1,0 +1,27 @@
+EDOD 51ORES
+City Stars
+Naser City
+|.  SalesReceipt |
+Transaction #. 1089939
+Date: 11/2/2021 Time: 12:15:32 P
+Cashier: m.kara Register#: 2
+Description Price Qty Total
+Gourmet Fresh ShishTa LE110. 0.55 LEG0.50
+00
+Lemon garlic chickenbr  LE199. 0.48 LE96.71
+00 598
+Frozen Herbed Chicken ad 1 LESS0.3
+Certified Angus Beef Bur LE180. 1 LE180.0
+00 0
+Total Amount LE437.21
+Net Amount LE437.21
+Credit Card Tendered LE437.21
+Card:00
+Auth:
+Change Due LEOD.00
+Thank you for shopping
+Gourmet Egypt
+We trust you'll come back soon!
+TTR
+INO
+1089939
