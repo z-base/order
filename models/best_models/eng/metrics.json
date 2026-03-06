@@ -1,7 +1,7 @@
 {
-  "epoch": 1,
-  "train_loss": 6.571187973022461,
-  "validation_loss": 6.362093925476074,
+  "epoch": 9,
+  "train_loss": 1.9133409197266038,
+  "validation_loss": 2.0183915266623864,
   "train_exact_match": null,
   "validation_exact_match": null
 }

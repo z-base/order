@@ -1,0 +1,251 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Quick 73 Smoke City Market",
+      "telephone": "818.855.1280",
+      "url": "http://www.smokecitymarket.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5242 Van Nuys Blvd",
+        "addressLocality": "Sherman Oaks",
+        "addressRegion": "CA",
+        "postalCode": "91401"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderDate": "2015-06-26T16:55:00",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Server",
+          "value": "Rebecca B"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed By",
+          "value": "Rebecca B"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Station",
+          "value": "S1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Identifier",
+          "value": "234673"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Sequence",
+          "value": "1"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "USD",
+          "value": "59.11"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "CA Sales Tax",
+          "unitText": "USD",
+          "value": "5.32"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "USD",
+          "value": "64.43"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Card Tender",
+          "unitText": "USD",
+          "value": "64.43"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "unitText": "USD",
+          "value": "0.00"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "36.86",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "19.50",
+        "priceCurrency": "USD",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1.89,
+          "unitText": "lb"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "Beef Ribs"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "8.50",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "Pulled Pork Sand"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "3.35",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "MenuItem",
+      "name": "Creamed Corn",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Size",
+        "value": "Small"
+      }
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "4.20",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-4",
+      "@type": "MenuItem",
+      "name": "Longhorn Mac & Cheese",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Size",
+        "value": "sm"
+      }
+    },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "3.95",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-5"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-5",
+      "@type": "MenuItem",
+      "name": "Chocolate Cake",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Portion",
+        "value": "Slice"
+      }
+    },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "2.25",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-6"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-6",
+      "@type": "MenuItem",
+      "name": "Fountain Soda"
+    }
+  ]
+}

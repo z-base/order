@@ -1,24 +1,24 @@
 {
   "language": "eng",
-  "corpusPath": "C:\\Users\\jorts\\order\\models\\tokenizers\\eng\\corpus.txt",
+  "corpusPath": "C:\\Users\\jorts\\order\\models\\tokenizers\\eng\\corpus.jsonl",
   "modelPath": "C:\\Users\\jorts\\order\\models\\tokenizers\\eng\\tokenizer.model",
-  "sampleCount": 4,
-  "trainCount": 3,
-  "validationCount": 1,
+  "sampleCount": 57,
+  "trainCount": 43,
+  "validationCount": 14,
   "inputLengths": {
-    "count": 4,
-    "min": 203,
-    "max": 329,
-    "avg": 253.25,
-    "p50": 219,
-    "p95": 329
+    "count": 57,
+    "min": 34,
+    "max": 422,
+    "avg": 198.47368421052633,
+    "p50": 191,
+    "p95": 334
   },
   "labelLengths": {
-    "count": 4,
-    "min": 714,
-    "max": 1328,
-    "avg": 968.75,
-    "p50": 848,
-    "p95": 1328
+    "count": 57,
+    "min": 127,
+    "max": 1899,
+    "avg": 655.6842105263158,
+    "p50": 627,
+    "p95": 1162
   }
 }

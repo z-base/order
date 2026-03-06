@@ -12,7 +12,7 @@ const DEFAULT_OPTIONS = {
   language: '',
   tokenizers: 'models/tokenizers',
   datasets: 'models/datasets',
-  corpusName: 'corpus.txt',
+  corpusName: 'corpus.jsonl',
   modelName: 'tokenizer.model',
   validationRatio: 0.25,
   validationCount: null,
@@ -89,7 +89,7 @@ Options:
   --language, --lang       Language directory under models/tokenizers
   --tokenizers <path>      Tokenizer root (default: models/tokenizers)
   --datasets <path>        Dataset root (default: models/datasets)
-  --corpus-name <name>     Corpus filename (default: corpus.txt)
+  --corpus-name <name>     Corpus filename (default: corpus.jsonl)
   --model-name <name>      SentencePiece model filename (default: tokenizer.model)
   --validation-ratio <n>   Validation split ratio in [0,1) (default: 0.25)
   --validation-count <n>   Validation sample count override

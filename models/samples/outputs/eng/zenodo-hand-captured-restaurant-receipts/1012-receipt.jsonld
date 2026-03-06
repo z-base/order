@@ -1,0 +1,179 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "HP Pho Ga",
+      "telephone": "(626) 288-9999",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8930 Mission Dr. #102",
+        "addressLocality": "Rosemead",
+        "addressRegion": "CA",
+        "postalCode": "91770"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "59980",
+      "orderDate": "2019-04-01T17:12:00",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Table",
+          "value": "14"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Server",
+          "value": "Admin"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "USD",
+          "value": "22.25"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "USD",
+          "value": "2.11"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Before Service Charge",
+          "unitText": "USD",
+          "value": "24.36"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Service Charge 40%",
+          "unitText": "USD",
+          "value": "8.90"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "USD",
+          "value": "33.26"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Open Time",
+          "value": "2019-04-01T16:39:00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Printed By",
+          "value": "Admin"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Suggested Tip 15%",
+          "unitText": "USD",
+          "value": "3.65"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Suggested Tip 18%",
+          "unitText": "USD",
+          "value": "4.38"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Suggested Tip 20%",
+          "unitText": "USD",
+          "value": "4.87"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "8.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "MenuItem",
+      "name": "Pho Ga",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Size",
+        "value": "Small"
+      }
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "9.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "MenuItem",
+      "name": "Pho Ga",
+      "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Size",
+        "value": "Large"
+      }
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "5.25",
+      "priceCurrency": "USD",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "MenuItem",
+      "name": "Goi Cuon"
+    }
+  ]
+}

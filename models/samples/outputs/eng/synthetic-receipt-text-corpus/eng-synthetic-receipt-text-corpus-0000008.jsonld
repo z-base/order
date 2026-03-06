@@ -1,0 +1,181 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Bluebird Cafe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5594 Market St",
+        "addressLocality": "Portland",
+        "addressRegion": "AZ",
+        "postalCode": "18184"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "R-0000008",
+      "orderDate": "2022-12-23T20:03:09",
+      "priceCurrency": "GBP",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        },
+        {
+          "@id": "#offer-4"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "Jamie"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment Method Label",
+          "value": "Visa"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal",
+          "unitText": "GBP",
+          "value": "190.62"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Tax",
+          "unitText": "GBP",
+          "value": "14.59"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "unitText": "GBP",
+          "value": "215.96"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "109.16",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 4,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "27.29",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-1",
+      "@type": "Product",
+      "name": "Sparkling Water"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "20.81",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-2"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-2",
+      "@type": "Product",
+      "name": "Ground Coffee"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "25.82",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "12.91",
+        "priceCurrency": "GBP",
+        "referenceQuantity": {
+          "@type": "QuantitativeValue",
+          "value": 1,
+          "unitText": "item"
+        }
+      },
+      "itemOffered": {
+        "@id": "#item-3"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-3",
+      "@type": "Product",
+      "name": "Thermal Paper"
+    },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "34.83",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#item-4"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#item-4",
+      "@type": "Product",
+      "name": "Paper Towels"
+    }
+  ]
+}

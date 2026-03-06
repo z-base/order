@@ -158,7 +158,7 @@ async function writeCorpora(corpora, tokenizersRoot) {
 
   for (const language of languages) {
     const directory = path.join(tokenizersRoot, language)
-    const corpusPath = path.join(directory, 'corpus.txt')
+    const corpusPath = path.join(directory, 'corpus.jsonl')
     const lines = corpora.get(language) ?? []
 
     await fs.mkdir(directory, { recursive: true })
