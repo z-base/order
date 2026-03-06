@@ -1,0 +1,172 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "HardwareStore",
+      "name": "AIK HUAT HARDWARE ENTERPRISE (SETIA ALAM) SDN BHD",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "name": "Company Registration Number",
+          "value": "822737-X"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Malaysia company number",
+          "value": "200801021422"
+        }
+      ],
+      "telephone": "012-6651783",
+      "faxNumber": "03-33623608",
+      "taxID": "000394528768",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 17-G, Jalan Setia Indah (X), U13/X, Setia Alam, Seksyen U13",
+        "postalCode": "40170",
+        "addressLocality": "Shah Alam",
+        "addressRegion": "Selangor",
+        "addressCountry": "MY"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CSP0393921",
+      "orderDate": "2017-06-15T15:28:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "SIMPLIFIED TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Salesperson",
+          "value": "AH002"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Quantity",
+          "value": 1
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Subtotal (GST)",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Included",
+          "value": "6%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary Tax Code",
+          "value": "SR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary Amount",
+          "value": "14.15",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Summary Tax Amount",
+          "value": "0.85",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Return Notice",
+          "value": "Goods sold are not refundable."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Closing Message",
+          "value": "Thank you for choosing us."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Exchange Notice",
+          "value": "Provide original bill for goods exchange within 1 week from transaction."
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Exchange Condition",
+          "value": "Goods must be in original state to be entitled for exchange."
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "15.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "seller": {
+        "@id": "#merchant"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "20\" 1.6KG X 500MM BIG STRETCH FILM",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Printed Barcode",
+        "value": "2000160000024"
+      }
+    }
+  ]
+}
