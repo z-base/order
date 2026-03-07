@@ -28,7 +28,8 @@
         { "@id": "#offer-3" },
         { "@id": "#offer-4" },
         { "@id": "#offer-5" },
-        { "@id": "#offer-6" }
+        { "@id": "#offer-6" },
+        { "@id": "#offer-7" }
       ],
       "additionalProperty": [
         { "@type": "PropertyValue", "name": "Server", "value": "Chenay B" },
@@ -87,6 +88,26 @@
       "itemOffered": { "@id": "#item-5" },
       "seller": { "@id": "#merchant" }
     },
-    { "@id": "#item-5", "@type": "MenuItem", "name": "Snow Combo" }
+    { "@id": "#item-5", "@type": "MenuItem", "name": "Snow Combo" },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-6" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-6", "@type": "MenuItem", "name": "Kickin Sauce" },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-7" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-7", "@type": "MenuItem", "name": "Mild" }
   ]
 }

@@ -74,7 +74,7 @@
       "priceCurrency": "USD",
       "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
       "itemOffered": { "@id": "#item-4" },
-      "seller": { "#id": "#merchant" }
+      "seller": { "@id": "#merchant" }
     },
     { "@id": "#item-4", "@type": "MenuItem", "name": "Crispy Naked Wings" },
     {
@@ -90,12 +90,12 @@
     {
       "@id": "#offer-6",
       "@type": "Offer",
-      "price": "0.00",
+      "price": "35.75",
       "priceCurrency": "USD",
       "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
       "itemOffered": { "@id": "#item-6" },
       "seller": { "@id": "#merchant" }
     },
-    { "@id": "#item-6", "@type": "MenuItem", "name": "Broccoli" }
+    { "@id": "#item-6", "@type": "MenuItem", "name": "Rib Eye Steak" }
   ]
 }

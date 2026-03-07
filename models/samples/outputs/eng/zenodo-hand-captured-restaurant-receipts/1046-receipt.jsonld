@@ -28,7 +28,7 @@
       ],
       "additionalProperty": [
         { "@type": "PropertyValue", "name": "Table", "value": "12" },
-        { "@type": "PropertyValue", "name": "Server", "value": "Veronique" },
+        { "@type": "PropertyValue", "name": "Server", "value": "Valerie" },
         { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "30.60" },
         { "@type": "PropertyValue", "name": "Discount (10%)", "unitText": "USD", "value": "-3.40" },
         { "@type": "PropertyValue", "name": "Service Charge", "unitText": "USD", "value": "6.12" }
