@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart Supercenter",
+      "telephone": "(515) 986-1783"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "7.11"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Tender",
+          "value": "13.00",
+          "unitText": "USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change Due",
+          "value": "5.89",
+          "unitText": "USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount Given",
+          "value": "0.50",
+          "unitText": "USD"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Store Number",
+          "value": "ST# 5748"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Operator Number",
+          "value": "OP# 00000158"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Terminal",
+          "value": "TE# 14"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Transaction Number",
+          "value": "TR# 03178"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Items Sold",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "0.41",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "Bananas",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "00000000401"
+      }
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "5.48",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    {
+      "@id": "#product-2",
+      "@type": "Product",
+      "name": "Frap",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Receipt Item Code",
+        "value": "001200010451"
+      }
+    }
+  ]
+}

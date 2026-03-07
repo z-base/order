@@ -1,0 +1,123 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" },
+        { "@id": "#offer-7" },
+        { "@id": "#offer-8" },
+        { "@id": "#offer-9" },
+        { "@id": "#offer-10" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "121.92"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Total Tax", "value": "20.98", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Store Number", "value": "10170" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "TBD" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "1.94",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "kg" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "Cesweer Blend", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "705609000" } },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "1.28",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-2" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Prcshees", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "705600" } },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "2.50",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-3" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "CiokB Hings", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "268401005" } },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "1.00",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-4" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-4", "@type": "Product", "name": "HioKen", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "201674000" } },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "5.48",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-5" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-5", "@type": "Product", "name": "Pork Loin Chop", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "20337400000" } },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "0.87",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-6" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-6", "@type": "Product", "name": "Drumsticks", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "26841800000" } },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "2.91",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-7" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-7", "@type": "Product", "name": "Eve Rad Steak Fillet", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "20148200000" } },
+    {
+      "@id": "#offer-8",
+      "@type": "Offer",
+      "price": "2.92",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-8" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-8", "@type": "Product", "name": "Rnd Steak Fillet", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "20148200000" } },
+    {
+      "@id": "#offer-9",
+      "@type": "Offer",
+      "price": "8.20",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-9" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-9", "@type": "Product", "name": "Beef for Stew", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "20264300000" } },
+    {
+      "@id": "#offer-10",
+      "@type": "Offer",
+      "price": "5.78",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-10" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-10", "@type": "Product", "name": "Turkey Frank", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "3010010055" } }
+  ]
+}

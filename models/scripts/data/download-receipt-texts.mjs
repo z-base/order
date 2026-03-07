@@ -195,7 +195,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/download-receipt-texts.mjs [options]
+node models/scripts/data/download-receipt-texts.mjs [options]
 
 Options:
   --help                 Show this help text
@@ -209,7 +209,7 @@ Options:
 
 Notes:
   Text manifests are loaded from models/data/text_sources/{lang}.json.
-  Downloadable text sources are fetched through models/scripts/download-receipt-assets.mjs.
+  Downloadable text sources are fetched through models/scripts/data/download-receipt-assets.mjs.
   Generator sources are sharded across worker threads and written as JSONL.
 `)
 }
@@ -346,7 +346,7 @@ function filterSources(sources, options) {
 async function spawnDownloader(manifestRoot, outputRoot, options) {
   const scriptPath = path.resolve(
     process.cwd(),
-    'models/scripts/download-receipt-assets.mjs'
+    'models/scripts/data/download-receipt-assets.mjs'
   )
   const args = [
     scriptPath,

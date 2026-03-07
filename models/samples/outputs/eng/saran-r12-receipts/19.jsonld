@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lake Wales",
+        "addressRegion": "FL",
+        "postalCode": "33870"
+      },
+      "telephone": "(676) 9425"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2021-10-16T11:22:45",
+      "orderNumber": "TR051?69",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "35.05"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Store Number", "value": "00859" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "009026" },
+        { "@type": "PropertyValue", "name": "Terminal", "value": "2671" },
+        { "@type": "PropertyValue", "name": "Subtotal", "value": "34.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax 1", "value": "1.05", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Shopping Card Tender", "value": "35.05", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "4" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "0.00", "unitText": "USD" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "14.97",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "eligibleTransactionVolume": 3
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "Grill cover", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "47128839" } },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "3.61",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Red grape", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "000000004023KF" } },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "16.47",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Unparsed remaining items" }
+  ]
+}

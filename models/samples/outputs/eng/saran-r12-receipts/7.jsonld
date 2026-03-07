@@ -1,0 +1,80 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2717 Rock Island Pl",
+        "addressLocality": "Bismarck",
+        "addressRegion": "ND",
+        "postalCode": "58504"
+      },
+      "telephone": "(701) 223-3066",
+      "department": "Store #01534",
+      "manager": { "@type": "Person", "name": "Tim Morris" }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2017-11-13T12:34:04",
+      "paymentMethod": "https://schema.org/DebitCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "23.19"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Subtotal", "value": "21.74", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax", "value": "1.45", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Terminal", "value": "SC011090" },
+        { "@type": "PropertyValue", "name": "Network ID", "value": "0081" },
+        { "@type": "PropertyValue", "name": "Approval Code", "value": "936886" },
+        { "@type": "PropertyValue", "name": "Approval AID", "value": "A0000000980840" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "3" },
+        { "@type": "PropertyValue", "name": "Receipt Number", "value": "2188 7274 6444 1567 3762" },
+        { "@type": "PropertyValue", "name": "Reference", "value": "731700494718" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "3.98",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "6 Wing Plate" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "4.88",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Asst 27" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "12.88",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Cutie Car" }
+  ]
+}

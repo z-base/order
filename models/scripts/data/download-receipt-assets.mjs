@@ -152,7 +152,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/download-receipt-assets.mjs [options]
+node models/scripts/data/download-receipt-assets.mjs [options]
 
 Options:
   --help                 Show this help text

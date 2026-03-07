@@ -1,0 +1,50 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "TloRENCE",
+        "addressRegion": "SC",
+        "postalCode": "2950"
+      },
+      "telephone": "(843) 292-3622",
+      "employee": {
+        "@type": "Person",
+        "name": "Mechall"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2017-08-11T19:19:01",
+      "orderNumber": "TR07142",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "50.00"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Store Number", "value": "S10" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "009049" },
+        { "@type": "PropertyValue", "name": "Terminal", "value": "49" },
+        { "@type": "PropertyValue", "name": "Store Number Label", "value": "02/03" },
+        { "@type": "PropertyValue", "name": "Gift Card Number", "value": "087456604343" },
+        { "@type": "PropertyValue", "name": "Gift Card Tender", "value": "50.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Gift Card Balance End", "value": "50.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Gift Card Balance End (Second Read)", "value": "50.09", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Approval Code", "value": "192966" },
+        { "@type": "PropertyValue", "name": "Reference", "value": "H00E742" },
+        { "@type": "PropertyValue", "name": "Account", "value": "613968506249" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "0.00", "unitText": "USD" }
+      ]
+    }
+  ]
+}

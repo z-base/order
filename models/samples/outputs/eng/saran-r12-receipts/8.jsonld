@@ -1,0 +1,109 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Thornton",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "16375 N. Washington St.",
+        "addressLocality": "Thornton",
+        "addressRegion": "CO",
+        "postalCode": "80023"
+      },
+      "department": "#629",
+      "addressCountry": "US"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "paymentMethod": "https://schema.org/CheckPayment",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "89.13"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "SubTotal", "value": "85.61", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax", "value": "3.52", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax (additional)", "value": "2.91", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Member Number", "value": "111826278335" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "4" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "OP# 14" },
+        { "@type": "PropertyValue", "name": "Reference", "value": "Name: PEPPER" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "23.99",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "Chicken Breast", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "13919" } },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "6.49",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Diced Tomatoes", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "967596" } },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "2.91",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "jar" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Jalapeño salsa", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "878137" } },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "12.87",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-4" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "dozen" }
+    },
+    { "@id": "#product-4", "@type": "Product", "name": "Eggs", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "967596" } },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "6.49",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-5" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "pan" }
+    },
+    { "@id": "#product-5", "@type": "Product", "name": "Eco Half Pan", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "77053" } },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "18.47",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-6" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-6", "@type": "Product", "name": "Ground Turkey", "identifier": { "@type": "PropertyValue", "name": "Item Code", "value": "55992" } }
+  ]
+}

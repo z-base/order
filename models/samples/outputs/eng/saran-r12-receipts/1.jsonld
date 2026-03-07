@@ -1,0 +1,213 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Trader Joe's",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2001 Greenville Ave",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "postalCode": "75206"
+      },
+      "telephone": "(469) 334-0614",
+      "department": "Store #403"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "TR# 1346/4683",
+      "orderDate": "2014-06-28T12:34:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" },
+        { "@id": "#offer-7" },
+        { "@id": "#offer-8" },
+        { "@id": "#offer-9" },
+        { "@id": "#offer-10" },
+        { "@id": "#offer-11" },
+        { "@id": "#offer-12" },
+        { "@id": "#offer-13" },
+        { "@id": "#offer-14" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "38.68"
+      },
+      "discount": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "0.00"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cash Tender", "value": "40.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "1.32", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "22" },
+        { "@type": "PropertyValue", "name": "Customer Name", "value": "Higgins, Ryan" },
+        { "@type": "PropertyValue", "name": "Site", "value": "traderjoes.com" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "1.29",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" },
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "R-CARROTS, shredded" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "1.99",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" },
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Cucumbers, Persian" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "1.59",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Tomatoes, crushed no salt" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "1.59",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#product-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#product-4", "@type": "Product", "name": "Tomatoes, whole no salt w/ basil" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "2.69",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-5" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-5", "@type": "Product", "name": "Organic old fashioned oatmeal" },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "2.49",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-6" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-6", "@type": "Product", "name": "Mini-pearl tomatoes" },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "3.90",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-7" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "pkg" }
+    },
+    { "@id": "#product-7", "@type": "Product", "name": "Shredded mozzarella lite" },
+    {
+      "@id": "#offer-8",
+      "@type": "Offer",
+      "price": "3.79",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-8" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "dozen" }
+    },
+    { "@id": "#product-8", "@type": "Product", "name": "Eggs, organic brown" },
+    {
+      "@id": "#offer-9",
+      "@type": "Offer",
+      "price": "0.89",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-9" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-9", "@type": "Product", "name": "Garbanzo beans" },
+    {
+      "@id": "#offer-10",
+      "@type": "Offer",
+      "price": "2.39",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-10" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-10", "@type": "Product", "name": "Avocados, hass bag" },
+    {
+      "@id": "#offer-11",
+      "@type": "Offer",
+      "price": "2.89",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-11" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "bag" }
+    },
+    { "@id": "#product-11", "@type": "Product", "name": "Apples, jazz bag" },
+    {
+      "@id": "#offer-12",
+      "@type": "Offer",
+      "price": "0.99",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-12" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "each" }
+    },
+    { "@id": "#product-12", "@type": "Product", "name": "Pepper bell, XL red" },
+    {
+      "@id": "#offer-13",
+      "@type": "Offer",
+      "price": "0.87",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-13" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "lb" }
+    },
+    { "@id": "#product-13", "@type": "Product", "name": "Bananas, organic" },
+    {
+      "@id": "#offer-14",
+      "@type": "Offer",
+      "price": "2.49",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-14" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "jar" }
+    },
+    {
+      "@id": "#product-14",
+      "@type": "Product",
+      "name": "Creamy salted peanut butter",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Line",
+          "value": "CREAMY SALTED PEANUT BUT TER 2.49"
+        }
+      ]
+    }
+  ]
+}

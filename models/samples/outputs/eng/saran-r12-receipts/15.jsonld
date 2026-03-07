@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2016-07-22",
+      "orderNumber": "01526",
+      "paymentMethod": "https://schema.org/CreditCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "12.88"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Store Number", "value": "STH0406" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "006969" },
+        { "@type": "PropertyValue", "name": "Terminal", "value": "79" },
+        { "@type": "PropertyValue", "name": "Transaction", "value": "01526" },
+        { "@type": "PropertyValue", "name": "Approval", "value": "222235" },
+        { "@type": "PropertyValue", "name": "Reference", "value": "620500604401" },
+        { "@type": "PropertyValue", "name": "Transaction ID", "value": "686205139884060" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "0.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "1" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "12.88",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "Diabetes item" }
+  ]
+}

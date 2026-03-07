@@ -201,7 +201,11 @@ def require_file(file_path: pathlib.Path, label: str) -> None:
 
 
 def load_training_module() -> Any:
-    script_path = pathlib.Path(__file__).resolve().with_name("train_seq2seq_overfit.py")
+    script_path = (
+        pathlib.Path(__file__).resolve().parents[1]
+        / "overfit"
+        / "train_seq2seq_overfit.py"
+    )
     module_name = "train_seq2seq_overfit"
     spec = importlib.util.spec_from_file_location(module_name, script_path)
     if spec is None or spec.loader is None:

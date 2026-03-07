@@ -5,7 +5,7 @@ import { spawn } from 'node:child_process'
 
 if (process.argv.includes('--help') || process.argv.includes('-h')) {
   console.log(`Usage:
-node models/scripts/download-receipt-images.mjs [options]
+node models/scripts/data/download-receipt-pdfs.mjs [options]
 
 Options:
   --help                 Show this help text
@@ -16,30 +16,30 @@ Options:
   --full                 Remove per-source limit
 
 Defaults:
-  manifests: models/data/image_sources
-  output: models/data/downloaded_images
-  default-format: image
+  manifests: models/data/pdf_sources
+  output: models/data/downloaded_pdfs
+  default-format: pdf
 
 Notes:
-  Sources are loaded from JSON files in models/data/image_sources/{lang}.json.
-  Downloads are written to models/data/downloaded_images/{lang}/{dataset}/...
+  Sources are loaded from JSON files in models/data/pdf_sources/{lang}.json.
+  Downloads are written to models/data/downloaded_pdfs/{lang}/{dataset}/...
 `)
   process.exit(0)
 }
 
 const scriptPath = path.resolve(
   process.cwd(),
-  'models/scripts/download-receipt-assets.mjs'
+  'models/scripts/data/download-receipt-assets.mjs'
 )
 
 const defaultArgs = [
   scriptPath,
   '--manifests',
-  'models/data/image_sources',
+  'models/data/pdf_sources',
   '--output',
-  'models/data/downloaded_images',
+  'models/data/downloaded_pdfs',
   '--default-format',
-  'image',
+  'pdf',
 ]
 
 const child = spawn(

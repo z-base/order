@@ -58,7 +58,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/extract-inputs.mjs [options]
+node models/scripts/data/extract-inputs.mjs [options]
 
 Options:
   --help                 Show this help text
@@ -158,15 +158,24 @@ async function main() {
 
   const downloadPhase = [
     spawnCommand(
-      path.resolve(process.cwd(), 'models/scripts/download-receipt-images.mjs'),
+      path.resolve(
+        process.cwd(),
+        'models/scripts/data/download-receipt-images.mjs'
+      ),
       downloadWorkerArgs
     ),
     spawnCommand(
-      path.resolve(process.cwd(), 'models/scripts/download-receipt-pdfs.mjs'),
+      path.resolve(
+        process.cwd(),
+        'models/scripts/data/download-receipt-pdfs.mjs'
+      ),
       downloadWorkerArgs
     ),
     spawnCommand(
-      path.resolve(process.cwd(), 'models/scripts/download-receipt-texts.mjs'),
+      path.resolve(
+        process.cwd(),
+        'models/scripts/data/download-receipt-texts.mjs'
+      ),
       downloadWorkerArgs
     ),
   ]
@@ -176,21 +185,21 @@ async function main() {
   await spawnCommand(
     path.resolve(
       process.cwd(),
-      'models/scripts/extract-inputs-from-receipt-texts.mjs'
+      'models/scripts/data/extract-inputs-from-receipt-texts.mjs'
     ),
     textExtractWorkerArgs
   )
   await spawnCommand(
     path.resolve(
       process.cwd(),
-      'models/scripts/extract-inputs-from-receipt-pdfs.mjs'
+      'models/scripts/data/extract-inputs-from-receipt-pdfs.mjs'
     ),
     pdfExtractWorkerArgs
   )
   await spawnCommand(
     path.resolve(
       process.cwd(),
-      'models/scripts/extract-inputs-from-receipt-images.mjs'
+      'models/scripts/data/extract-inputs-from-receipt-images.mjs'
     ),
     imageExtractWorkerArgs
   )

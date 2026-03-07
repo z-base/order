@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "ParsingConfidence", "value": "low" },
+        { "@type": "PropertyValue", "name": "Notes", "value": "OCR text is too distorted for reliable line-item extraction." }
+      ]
+    }
+  ]
+}

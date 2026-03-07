@@ -125,7 +125,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/extract-inputs-from-receipt-images.mjs [options]
+node models/scripts/data/extract-inputs-from-receipt-images.mjs [options]
 
 Options:
   --help                 Show this help text
@@ -143,7 +143,7 @@ Options:
 Notes:
   Relative paths are preserved, so downloaded_images/{lang}/... becomes samples/inputs/{lang}/...
   OCR workers are selected from the top-level language directory when available.
-  For PDF datasets, use models/scripts/extract-inputs-from-receipt-pdfs.mjs.
+  For PDF datasets, use models/scripts/data/extract-inputs-from-receipt-pdfs.mjs.
 `)
 }
 

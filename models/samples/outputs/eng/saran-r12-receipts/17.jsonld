@@ -1,0 +1,183 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1165 S Camino Del Rio",
+        "addressLocality": "Durango",
+        "addressRegion": "CO",
+        "postalCode": "81303"
+      },
+      "telephone": "(970) 269-8755",
+      "employee": {
+        "@type": "Person",
+        "name": "Mike Neidlinger"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2017-01-16T14:26:03",
+      "orderNumber": "TR03080",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" },
+        { "@id": "#offer-7" },
+        { "@id": "#offer-8" },
+        { "@id": "#offer-9" },
+        { "@id": "#offer-10" },
+        { "@id": "#offer-11" },
+        { "@id": "#offer-12" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "38.68"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Store Number", "value": "02270" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "000144" },
+        { "@type": "PropertyValue", "name": "Terminal", "value": "02" },
+        { "@type": "PropertyValue", "name": "Subtotal", "value": "36.35", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax 7.90%", "value": "1.07", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax 5.00%", "value": "1.14", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax 2.90%", "value": "0.12", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Cash Tender", "value": "40.68", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "2.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "16" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "1.76",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "Bananas", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "00000000401" } },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "2.00",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Beverage", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "003120002133" } },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "2.00",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Os crn pom", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "00312007016" } },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "0.96",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-4" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-4", "@type": "Product", "name": "Strawberry cc", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "076471782200" } },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "2.98",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-5" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-5", "@type": "Product", "name": "Capri tomato", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "073447601213" } },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "3.78",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-6" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-6", "@type": "Product", "name": "Kft singles", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "002100061526" } },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "3.98",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-7" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-7", "@type": "Product", "name": "Unclear item 44500982114", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "004450098211" } },
+    {
+      "@id": "#offer-8",
+      "@type": "Offer",
+      "price": "3.43",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-8" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-8", "@type": "Product", "name": "Hard salami", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "020533960343" } },
+    {
+      "@id": "#offer-9",
+      "@type": "Offer",
+      "price": "1.76",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-9" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "lb" }
+    },
+    { "@id": "#product-9", "@type": "Product", "name": "Avocado", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "000000004046K1" } },
+    {
+      "@id": "#offer-10",
+      "@type": "Offer",
+      "price": "1.00",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-10" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-10", "@type": "Product", "name": "Pills white", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "068113113619" } },
+    {
+      "@id": "#offer-11",
+      "@type": "Offer",
+      "price": "2.97",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-11" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-11", "@type": "Product", "name": "Sh nylon col", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "007417024836" } },
+    {
+      "@id": "#offer-12",
+      "@type": "Offer",
+      "price": "1.67",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-12" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-12", "@type": "Product", "name": "Hand cleaner", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "004125100005" } }
+  ]
+}

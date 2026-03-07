@@ -1,10 +1,8 @@
 import fg from 'fast-glob'
 import { access } from 'node:fs/promises'
-import { dirname, resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { resolve } from 'node:path'
 
-const scriptDir = dirname(fileURLToPath(import.meta.url))
-const outputsDir = resolve(scriptDir, '..', 'samples', 'outputs')
+const outputsDir = resolve(process.cwd(), 'models', 'samples', 'outputs')
 
 try {
   await access(outputsDir)

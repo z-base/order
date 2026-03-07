@@ -1,0 +1,144 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart",
+      "telephone": "not clearly legible"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2019-04-21",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" },
+        { "@id": "#offer-7" },
+        { "@id": "#offer-8" },
+        { "@id": "#offer-9" },
+        { "@id": "#offer-10" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "144.02"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Subtotal", "value": "139.44", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax", "value": "4.568", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Cash Tender", "value": "160.02", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "6.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "26" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "2.96",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "VATER TOTS", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "001312000026" } },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "2.68",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Breads/brownies (unreadable text)", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "007874219410" } },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "4.98",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Snack bars", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "002190848816" } },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "6.88",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-4" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-4", "@type": "Product", "name": "Frico cheese", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "003120806000" } },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "5.88",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-5" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-5", "@type": "Product", "name": "HRI/CHED C... (unreadable)", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "006920000000" } },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "6.98",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-6" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-6", "@type": "Product", "name": "SC_BCN CHDDR", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "007874202906" } },
+    {
+      "@id": "#offer-7",
+      "@type": "Offer",
+      "price": "9.72",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-7" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-7", "@type": "Product", "name": "ABE THINBRST", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "022461710972" } },
+    {
+      "@id": "#offer-8",
+      "@type": "Offer",
+      "price": "2.98",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-8" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-8", "@type": "Product", "name": "Avo Verde", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "061611206143" } },
+    {
+      "@id": "#offer-9",
+      "@type": "Offer",
+      "price": "2.74",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-9" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-9", "@type": "Product", "name": "TR HS_FRH", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "002240062150" } },
+    {
+      "@id": "#offer-10",
+      "@type": "Offer",
+      "price": "4.56",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-10" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-10", "@type": "Product", "name": "Bagels", "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "001376402801" } }
+  ]
+}

@@ -3,10 +3,7 @@ import crypto from 'node:crypto'
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import process from 'node:process'
-import { createRequire } from 'node:module'
-
-const require = createRequire(import.meta.url)
-const { SentencePieceProcessor } = require('@agnai/sentencepiece-js')
+import { SentencePieceProcessor } from '@sctg/sentencepiece-js'
 
 const DEFAULT_OPTIONS = {
   language: '',
@@ -82,7 +79,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/transform-corpus-to-tokenized-dataset.mjs --language <lang> [options]
+node models/scripts/data/transform-corpus-to-tokenized-dataset.mjs --language <lang> [options]
 
 Options:
   --help                   Show this help text

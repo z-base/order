@@ -1,0 +1,69 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Walmart",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3201 Manawa Centre Dr",
+        "addressLocality": "Council Bluffs",
+        "addressRegion": "IA",
+        "postalCode": "51601"
+      },
+      "telephone": "(712) 366-3326",
+      "manager": {
+        "@type": "Person",
+        "name": "DONALD MONEYMAKER"
+      },
+      "department": "Store #01965"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2018-12-08T12:39:24",
+      "paymentMethod": "https://schema.org/DebitCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "USD",
+      "acceptedOffer": [{ "@id": "#offer-1" }],
+      "discount": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "0.00"
+      },
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "USD",
+        "price": "7.43"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Subtotal", "value": "6.94", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Tax", "value": "0.49", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Printed Total", "value": "1.43", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Change Due", "value": "0.00", "unitText": "USD" },
+        { "@type": "PropertyValue", "name": "Terminal", "value": "MX995026" },
+        { "@type": "PropertyValue", "name": "Network ID", "value": "0066" },
+        { "@type": "PropertyValue", "name": "Approval Code", "value": "087193" },
+        { "@type": "PropertyValue", "name": "Reference", "value": "534200381755" },
+        { "@type": "PropertyValue", "name": "Total Purchase Label", "value": "7.43 TOTAL PURCHASE" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "6.94",
+      "priceCurrency": "USD",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "unit" }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "SU HRO FGHTR",
+      "identifier": { "@type": "PropertyValue", "name": "Receipt Item Code", "value": "063050940732" }
+    }
+  ]
+}

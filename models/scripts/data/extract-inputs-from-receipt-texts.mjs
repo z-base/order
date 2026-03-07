@@ -99,7 +99,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/extract-inputs-from-receipt-texts.mjs [options]
+node models/scripts/data/extract-inputs-from-receipt-texts.mjs [options]
 
 Options:
   --help                 Show this help text

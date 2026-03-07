@@ -41,7 +41,7 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-node models/scripts/transform-samples-to-corpus.mjs [options]
+node models/scripts/data/transform-samples-to-corpus.mjs [options]
 
 Options:
   --help                 Show this help text

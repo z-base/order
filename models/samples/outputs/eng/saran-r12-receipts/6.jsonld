@@ -1,0 +1,85 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Momi & Toy's",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kemang, L/ VI No. 6",
+        "addressLocality": "Jakarta",
+        "addressCountry": "ID"
+      },
+      "description": "MOMI & TOY'S CREPERIFE"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2015-01-26T16:13:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "IDR",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" }
+      ],
+      "totalPaymentDue": {
+        "@type": "PriceSpecification",
+        "priceCurrency": "IDR",
+        "price": "175000"
+      },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Subtotal", "value": "175000", "unitText": "IDR" },
+        { "@type": "PropertyValue", "name": "Cash Tender", "value": "200000", "unitText": "IDR" },
+        { "@type": "PropertyValue", "name": "Items Sold", "value": "4" },
+        { "@type": "PropertyValue", "name": "Receipt Number", "value": "A15000001363" },
+        { "@type": "PropertyValue", "name": "Cashier", "value": "POS Title: Cashier" },
+        { "@type": "PropertyValue", "name": "Operator", "value": "Gunawan Gunawan" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "74000",
+      "priceCurrency": "IDR",
+      "itemOffered": { "@id": "#product-1" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-1", "@type": "Product", "name": "Ham and Cheese" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "16000",
+      "priceCurrency": "IDR",
+      "itemOffered": { "@id": "#product-2" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-2", "@type": "Product", "name": "Ice Java Tea" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "13000",
+      "priceCurrency": "IDR",
+      "itemOffered": { "@id": "#product-3" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-3", "@type": "Product", "name": "Mineral Water" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "12000",
+      "priceCurrency": "IDR",
+      "itemOffered": { "@id": "#product-4" },
+      "seller": { "@id": "#merchant" },
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" }
+    },
+    { "@id": "#product-4", "@type": "Product", "name": "Black & White" }
+  ]
+}
