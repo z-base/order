@@ -12,5 +12,5 @@
     "skipLibCheck": true,
     "lib": ["es2024", "dom", "dom.iterable", "webworker"]
   },
-  "include": ["src", "node_modules/scribe.js-ocr/js/global.d.ts"]
+  "include": ["src", "src/.types/index.d.ts"]
 }
