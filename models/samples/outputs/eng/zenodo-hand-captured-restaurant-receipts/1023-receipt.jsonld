@@ -1,0 +1,84 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Thai Gusto Restaurant",
+      "telephone": "425-252-3525",
+      "faxNumber": "425-252-3525",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2011 Hewitt Ave",
+        "addressLocality": "Everett",
+        "addressRegion": "WA",
+        "postalCode": "98201"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2017-06-16T12:36:00",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Table", "value": "4" },
+        { "@type": "PropertyValue", "name": "Server", "value": "PRACH" },
+        { "@type": "PropertyValue", "name": "Total Items", "value": 4 },
+        { "@type": "PropertyValue", "name": "Sales Tax", "unitText": "USD", "value": "2.67" },
+        { "@type": "PropertyValue", "name": "Grand Total", "unitText": "USD", "value": "30.15" },
+        { "@type": "PropertyValue", "name": "Tip Guide 15%", "unitText": "USD", "value": "4.52" },
+        { "@type": "PropertyValue", "name": "Tip Guide 18%", "unitText": "USD", "value": "5.43" },
+        { "@type": "PropertyValue", "name": "Tip Guide 20%", "unitText": "USD", "value": "6.03" },
+        { "@type": "PropertyValue", "name": "Printed Notice", "value": "GUEST CHECK - This is not a receipt." },
+        { "@type": "PropertyValue", "name": "Closing Message", "value": "Thank you very much. Come back again." }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "7.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "3.50", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "Chang" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "10.24",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Protein", "value": "Chicken" },
+        { "@type": "PropertyValue", "name": "Spice Level", "value": "5*****" },
+        { "@type": "PropertyValue", "name": "Rice", "value": "Small Brown Rice" }
+      ]
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "Garlic Delight" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "10.24",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Protein", "value": "Chicken" },
+        { "@type": "PropertyValue", "name": "Spice Level", "value": "5*****" },
+        { "@type": "PropertyValue", "name": "Rice", "value": "Small Brown Rice" }
+      ]
+    },
+    { "@id": "#item-3", "@type": "MenuItem", "name": "Red Curry" }
+  ]
+}

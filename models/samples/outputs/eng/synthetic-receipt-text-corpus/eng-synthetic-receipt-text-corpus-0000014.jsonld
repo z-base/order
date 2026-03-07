@@ -1,0 +1,98 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Bluebird Cafe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2782 Sunset Blvd",
+        "addressLocality": "Phoenix",
+        "addressRegion": "IL",
+        "postalCode": "83669"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000014",
+      "orderDate": "2024-08-01T10:10:42",
+      "priceCurrency": "GBP",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Jordan" },
+        { "@type": "PropertyValue", "name": "Payment Method Label", "value": "Amex" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "GBP", "value": "422.71" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "GBP", "value": "3.92" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "GBP", "value": "43.68" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "GBP", "value": "8.21" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "GBP", "value": "470.68" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "139.92",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "34.98", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Adhesive Tape", "sku": "SKU-1440" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "10.60",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5.30", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Safety Gloves", "sku": "SKU-9383" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "48.27",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "16.09", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Ink Cartridge", "sku": "SKU-7572" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "67.28",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "33.64", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Sandwich Combo", "sku": "SKU-1427" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "156.64",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "39.16", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-5", "@type": "Product", "name": "Cleaning Spray", "sku": "SKU-3552" }
+  ]
+}

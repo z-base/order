@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Brightline Bistro"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000016",
+      "orderDate": "2022-11-07T18:33:33",
+      "priceCurrency": "CAD",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Payment Method Label", "value": "Visa" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "CAD", "value": "382.84" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "87.81",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29.27", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Adhesive Tape", "sku": "SKU-1147" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "54.76",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "13.69", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Blue Pen Pack", "sku": "SKU-6329" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "64.72",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "16.18", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Paper Towels", "sku": "SKU-8275" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "158.56",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "39.64", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Ink Cartridge", "sku": "SKU-6655" }
+  ]
+}

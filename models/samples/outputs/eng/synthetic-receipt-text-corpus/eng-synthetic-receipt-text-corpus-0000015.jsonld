@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Aster Pharmacy",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "9048 River Rd",
+        "addressLocality": "Portland",
+        "addressRegion": "OR",
+        "postalCode": "52460"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000015",
+      "orderDate": "2025-04-19T16:22:30",
+      "priceCurrency": "GBP",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Jamie" },
+        { "@type": "PropertyValue", "name": "Payment Method", "value": "Debit" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "GBP", "value": "115.98" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "GBP", "value": "2.73" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "GBP", "value": "7.26" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "GBP", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "GBP", "value": "120.51" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "52.76",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "13.19", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Ink Cartridge", "sku": "SKU-8766" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "4.78",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2.39", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Blue Pen Pack", "sku": "SKU-6048" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "58.44",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "14.61", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Paper Towels", "sku": "SKU-1971" }
+  ]
+}

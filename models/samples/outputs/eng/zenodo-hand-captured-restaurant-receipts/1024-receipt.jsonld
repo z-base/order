@@ -1,0 +1,64 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "New Asia Buffet",
+      "telephone": "(818) 898-0880",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14727 Rinaldi St",
+        "addressLocality": "San Fernando",
+        "addressRegion": "CA",
+        "postalCode": "91340"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Printed Date", "value": "Nov-15-06" },
+        { "@type": "PropertyValue", "name": "Printed Time", "value": "5:17PM" },
+        { "@type": "PropertyValue", "name": "Server", "value": "2" },
+        { "@type": "PropertyValue", "name": "Table", "value": "D4" },
+        { "@type": "PropertyValue", "name": "Guests", "value": 1 },
+        { "@type": "PropertyValue", "name": "Amount", "unitText": "USD", "value": "31.12" },
+        { "@type": "PropertyValue", "name": "Tax (9%)", "unitText": "USD", "value": "2.80" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "33.92" },
+        { "@type": "PropertyValue", "name": "Suggested Tip 10%", "unitText": "USD", "value": "3.39" },
+        { "@type": "PropertyValue", "name": "Suggested Tip 15%", "unitText": "USD", "value": "5.09" },
+        { "@type": "PropertyValue", "name": "Suggested Tip 20%", "unitText": "USD", "value": "6.78" },
+        { "@type": "PropertyValue", "name": "Closing Message", "value": "THANK YOU VERY MUCH." }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "27.96",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "13.98", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "Weekend Dinner" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "3.16",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1.58", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "Coke" }
+  ]
+}

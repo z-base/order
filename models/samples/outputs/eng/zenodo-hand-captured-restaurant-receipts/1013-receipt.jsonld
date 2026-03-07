@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "ALBETOS MEXICAN FOOD",
+      "telephone": "(562) 860-2530",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "11732 Artesia Blvd.",
+        "addressLocality": "Artesia",
+        "addressRegion": "CA"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "01029",
+      "acceptedOffer": [
+        { "@id": "#offer-1" }
+      ],
+      "priceCurrency": "USD",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Phone Orders Welcome", "value": true },
+        { "@type": "PropertyValue", "name": "ATM Charge", "unitText": "USD", "value": "0.75" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "8.85" },
+        { "@type": "PropertyValue", "name": "Tax Total", "unitText": "USD", "value": "0.73" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "9.58" },
+        { "@type": "PropertyValue", "name": "ATM", "unitText": "USD", "value": "9.58" },
+        { "@type": "PropertyValue", "name": "Recall", "value": "636" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "8.10",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2.70", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "ASADA TACO" }
+  ]
+}
