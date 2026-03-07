@@ -78,22 +78,69 @@ function collapseWhitespace(value) {
   return value.replace(/\s+/g, ' ').trim()
 }
 
+function toPosixPath(value) {
+  return value.split(path.sep).join('/')
+}
+
+function getPathSegments(value) {
+  return toPosixPath(value).split('/').filter(Boolean)
+}
+
+function commonPathPrefixLength(a, b) {
+  const aParts = getPathSegments(a)
+  const bParts = getPathSegments(b)
+  const max = Math.min(aParts.length, bParts.length)
+  let i = 0
+
+  while (i < max && aParts[i] === bParts[i]) {
+    i += 1
+  }
+
+  return i
+}
+
+function scoreCandidateMatch(candidateRelativePath, targetRelativePath) {
+  const candidate = toPosixPath(candidateRelativePath)
+  const target = toPosixPath(targetRelativePath)
+  const exactMatch = candidate === target ? 1000 : 0
+  const prefixScore = commonPathPrefixLength(candidate, target) * 4
+  const imagesCandidate = candidate.startsWith('images/')
+  const imagesBias = imagesCandidate ? 200 : 0
+  const archivePenalty = candidate.startsWith('archive-zip/') ? -80 : 0
+  const lengthPenalty = candidate.length
+
+  return exactMatch + imagesBias + prefixScore + archivePenalty - lengthPenalty * 0.001
+}
+
 async function buildInputIndex(inputsRoot) {
   const inputFiles = await findFiles(inputsRoot, '.txt')
   const index = new Map()
 
   for (const inputPath of inputFiles) {
     const relativeInputPath = path.relative(inputsRoot, inputPath)
-    const parts = relativeInputPath.split(path.sep)
+    const parts = toPosixPath(relativeInputPath).split('/')
     const language = parts[0]
     const dataset = parts[1]
-    const basename = path.basename(inputPath)
-    const key = `${language}/${dataset}/${basename}`
-    const existing = index.get(key) ?? []
+    const datasetRelativePath = parts.slice(2).join('/')
+    const baseKey = `${language}/${dataset}/${path.basename(inputPath)}`
+    const fullKey = `${language}/${dataset}/${datasetRelativePath}`
+    const existingBase = index.get(baseKey) ?? []
+    const existingFull = index.get(fullKey) ?? []
 
-    existing.push(inputPath)
-    index.set(key, existing)
+    const entry = {
+      path: inputPath,
+      datasetRelativePath,
+    }
+
+    existingBase.push(entry)
+    existingFull.push(entry)
+    index.set(baseKey, existingBase)
+    index.set(fullKey, existingFull)
   }
+
+  index.forEach((matches, key) => {
+    index.set(key, [...new Map(matches.map((match) => [match.path, match])).values()])
+  })
 
   return index
 }
@@ -104,19 +151,51 @@ function findMatchingInput(relativeOutputPath, inputIndex) {
   const parts = parsed.dir.split(path.sep)
   const language = parts[0]
   const dataset = parts[1]
-  const key = `${language}/${dataset}/${parsed.name}.txt`
-  const matches = inputIndex.get(key) ?? []
+  const outputRelativeFromDataset = path.posix.join(...parts.slice(2), `${parsed.name}.txt`)
+  const fullKey = `${language}/${dataset}/${outputRelativeFromDataset}`
+  const exactMatches = inputIndex.get(fullKey) ?? []
 
-  if (matches.length === 0) {
+  if (exactMatches.length === 1) {
+    return exactMatches[0].path
+  }
+
+  const basename = `${parsed.name}.txt`
+  const baseKey = `${language}/${dataset}/${basename}`
+  const candidates = inputIndex.get(baseKey) ?? []
+
+  if (candidates.length === 0) {
+    if (exactMatches.length > 0) {
+      return exactMatches[0].path
+    }
     throw new Error(`Missing matching input for ${relativeOutputPath}`)
   }
-  if (matches.length > 1) {
-    throw new Error(
-      `Ambiguous matching input for ${relativeOutputPath}: ${matches.join(', ')}`
-    )
+
+  if (candidates.length === 1) {
+    return candidates[0].path
   }
 
-  return matches[0]
+  const ranked = candidates.map((candidate) => ({
+    ...candidate,
+    score: scoreCandidateMatch(candidate.datasetRelativePath, outputRelativeFromDataset),
+  }))
+  ranked.sort((a, b) => {
+    if (a.score !== b.score) return b.score - a.score
+    return a.path.localeCompare(b.path)
+  })
+
+  const best = ranked[0]
+  const tied = ranked.filter((candidate) => candidate.score === best.score)
+
+  if (tied.length > 1) {
+    const paths = tied.map((candidate) => candidate.path).join(', ')
+    console.warn(`Warning: ambiguous input match for ${relativeOutputPath}. Using: ${paths}`)
+  }
+
+  if (exactMatches.length > 0) {
+    return ranked[0].path
+  }
+
+  return ranked[0].path
 }
 
 async function buildCorpusEntries(outputFiles, outputsRoot, inputsRoot) {
