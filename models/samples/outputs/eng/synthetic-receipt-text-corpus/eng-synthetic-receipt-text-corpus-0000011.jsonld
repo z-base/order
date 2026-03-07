@@ -1,0 +1,66 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Bluebird Cafe"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000011",
+      "orderDate": "2025-01-07T21:10:20",
+      "priceCurrency": "CAD",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Payment Method Label", "value": "Mastercard" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "CAD", "value": "230.16" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "CAD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "CAD", "value": "15.21" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "CAD", "value": "10.64" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "CAD", "value": "256.01" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "103.32",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "34.44", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Sparkling Water", "sku": "SKU-7724" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "41.84",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "20.92", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Printer Labels", "sku": "SKU-1738" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "85.00",
+      "priceCurrency": "CAD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "42.50", "priceCurrency": "CAD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Cleaning Spray", "sku": "SKU-8548" }
+  ]
+}

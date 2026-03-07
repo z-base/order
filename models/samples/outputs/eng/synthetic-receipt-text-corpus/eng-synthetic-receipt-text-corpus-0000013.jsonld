@@ -1,0 +1,109 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Corner Pantry",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2100 Maple Dr",
+        "addressLocality": "Atlanta",
+        "addressRegion": "TN",
+        "postalCode": "23637"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000013",
+      "orderDate": "2023-03-27T16:56:58",
+      "priceCurrency": "GBP",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Alex" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "GBP", "value": "416.90" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "GBP", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "GBP", "value": "36.54" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "GBP", "value": "6.28" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "GBP", "value": "459.72" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "83.56",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "20.89", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Desk Lamp", "sku": "SKU-2635" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "80.54",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "40.27", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Extension Cord", "sku": "SKU-4984" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "76.60",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "38.30", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Cleaning Spray", "sku": "SKU-4894" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "110.64",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "36.88", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Olive Oil", "sku": "SKU-7891" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "56.68",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "28.34", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-5", "@type": "Product", "name": "Ground Coffee", "sku": "SKU-2835" },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "8.88",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2.22", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-6" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-6", "@type": "Product", "name": "Laundry Detergent", "sku": "SKU-8961" }
+  ]
+}
