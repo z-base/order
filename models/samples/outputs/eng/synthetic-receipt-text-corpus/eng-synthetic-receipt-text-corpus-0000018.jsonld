@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "NORTHWIND MARKET",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5100 Oak Ave",
+        "addressLocality": "Madison",
+        "addressRegion": "OR",
+        "postalCode": "81362"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000018",
+      "orderDate": "2024-11-06T16:51:34",
+      "priceCurrency": "USD",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Jordan" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "101.28" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "USD", "value": "7.15" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "108.43" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "101.28",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "33.76", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Laundry Detergent" }
+  ]
+}

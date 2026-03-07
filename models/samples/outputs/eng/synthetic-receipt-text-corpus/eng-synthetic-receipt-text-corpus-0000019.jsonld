@@ -1,0 +1,106 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Atlas Office Depot",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1679 River Rd",
+        "addressLocality": "Austin",
+        "addressRegion": "WA",
+        "postalCode": "96315"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000019",
+      "orderDate": "2025-01-04T17:15:14",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Jamie" },
+        { "@type": "PropertyValue", "name": "Payment Method", "value": "Debit" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "286.45" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "USD", "value": "1.30" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "USD", "value": "11.77" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "296.92" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "52.80",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "13.20", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Safety Gloves", "sku": "SKU-2466" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "110.92",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "27.73", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Blue Pen Pack", "sku": "SKU-9669" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "24.88",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Notebook Set", "sku": "SKU-4203" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "21.24",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5.31", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Extension Cord", "sku": "SKU-8933" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "60.68",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "15.17", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-5", "@type": "Product", "name": "Printer Labels", "sku": "SKU-9608" },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "15.93",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-6" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-6", "@type": "Product", "name": "Paper Towels", "sku": "SKU-2151" }
+  ]
+}

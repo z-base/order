@@ -1,0 +1,83 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "Orchard Family Mart",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2518 Maple Dr",
+        "addressLocality": "Denver",
+        "addressRegion": "AZ",
+        "postalCode": "97611"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000017",
+      "orderDate": "2023-03-04T21:00:29",
+      "priceCurrency": "GBP",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Parker" },
+        { "@type": "PropertyValue", "name": "Payment Method Label", "value": "Visa" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "GBP", "value": "208.30" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "GBP", "value": "12.29" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "GBP", "value": "220.59" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "28.28",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "7.07", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "USB-C Cable" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "86.84",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "21.71", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Paper Towels" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "90.46",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "45.23", "priceCurrency": "GBP", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Organic Apples" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "2.72",
+      "priceCurrency": "GBP",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Extension Cord" }
+  ]
+}

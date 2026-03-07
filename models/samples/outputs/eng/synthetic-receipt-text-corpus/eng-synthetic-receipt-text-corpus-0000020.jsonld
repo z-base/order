@@ -1,0 +1,76 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Beacon Pet Shop"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000020",
+      "orderDate": "2022-02-14T10:39:18",
+      "priceCurrency": "USD",
+      "paymentMethod": "https://schema.org/Visa",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "226.82" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "USD", "value": "19.97" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "246.79" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "12.56",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "3.14", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Desk Lamp", "sku": "SKU-7654" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "29.25",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "9.75", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Travel Mug", "sku": "SKU-9625" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "56.76",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "28.38", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Paper Towels", "sku": "SKU-8154" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "128.25",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "42.75", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Printer Labels", "sku": "SKU-8943" }
+  ]
+}

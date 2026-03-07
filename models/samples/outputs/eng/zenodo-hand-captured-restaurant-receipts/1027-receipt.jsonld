@@ -1,0 +1,100 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Longboards",
+      "telephone": "(808) 679-4700",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "92-161 Waipahe Place",
+        "addressLocality": "Kapolei",
+        "addressRegion": "HI",
+        "postalCode": "96707"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "24016",
+      "orderDate": "2019-01-11T12:46:00",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Server", "value": "Elijah J" },
+        { "@type": "PropertyValue", "name": "Table", "value": "44/0" },
+        { "@type": "PropertyValue", "name": "Service Mode", "value": "Dine In" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "42.75" },
+        { "@type": "PropertyValue", "name": "Ohana Discount Breakfast", "unitText": "USD", "value": "-3.30" },
+        { "@type": "PropertyValue", "name": "HI HNLKO 4.712% GET", "unitText": "USD", "value": "1.86" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "41.31" },
+        { "@type": "PropertyValue", "name": "Gratuity", "unitText": "USD", "value": "3.00" },
+        { "@type": "PropertyValue", "name": "Grand Total", "unitText": "USD", "value": "44.31" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "8.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "Green Salad" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "19.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cook", "value": "Medium Well" }
+      ]
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "Wagyu Cheeseburger" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "2.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "MenuItem", "name": "Garlic Fries" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "13.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "MenuItem", "name": "ADD RAW ONIONS & BACON PLZ" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "13.75",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Drink", "value": "Tea" }
+      ]
+    },
+    { "@id": "#item-5", "@type": "MenuItem", "name": "Drink of the Day" }
+  ]
+}
