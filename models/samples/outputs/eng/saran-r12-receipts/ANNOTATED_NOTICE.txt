@@ -1,0 +1,4 @@
+Quality control sweep completed on 2026-03-07.
+This dataset directory is handled already.
+Canonical reviewed annotations are under images/images.
+Duplicate receipt outputs were collapsed to a single approved result per receipt.

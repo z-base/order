@@ -1,0 +1,5 @@
+Quality control sweep completed on 2026-03-07.
+This dataset directory is handled already.
+Canonical OCR sample inputs are under images/images.
+Extraction-generated input variants in this directory are retained.
+Output-side duplicate handling and annotation review were completed for this dataset.

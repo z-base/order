@@ -4,27 +4,11 @@
     {
       "@id": "#order",
       "@type": "Order",
-      "orderDate": "2017-11-15T21:40:00",
       "priceCurrency": "USD",
       "paymentStatus": "https://schema.org/PaymentComplete",
-      "acceptedOffer": [
-        { "@id": "#offer-1" }
-      ],
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "RawTotal", "value": "48.00" },
-        { "@type": "PropertyValue", "name": "Tax Amount", "value": "18.50" },
-        { "@type": "PropertyValue", "name": "Table", "value": "30062" }
+        { "@type": "PropertyValue", "name": "RawTotal", "value": "48.00" }
       ]
-    },
-    {
-      "@id": "#offer-1",
-      "@type": "Offer",
-      "itemOffered": { "@id": "#item-1" }
-    },
-    {
-      "@id": "#item-1",
-      "@type": "MenuItem",
-      "name": "Item on receipt"
     }
   ]
 }

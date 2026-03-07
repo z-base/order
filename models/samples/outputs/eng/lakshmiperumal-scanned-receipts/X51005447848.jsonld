@@ -129,7 +129,13 @@
     {
       "@id": "#product-2",
       "@type": "MenuItem",
-      "name": "517"
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "RawItemCode",
+          "value": "517"
+        }
+      ]
     },
     {
       "@id": "#offer-3",

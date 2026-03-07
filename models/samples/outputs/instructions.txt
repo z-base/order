@@ -16,6 +16,18 @@ Do not silently invent corrected values.
 Only output corrected values when they are supported by direct receipt evidence.
 If a value cannot be corrected with sufficient confidence from the input alone, preserve the most faithful observed value or omit the field rather than hallucinating.
 
+Critical unresolved-field rule:
+If a field is clearly present on the receipt but its value is unreadable or not recoverable with sufficient confidence, represent that field as unresolved instead of guessing.
+Use an explicit empty string as the machine-readable unresolved marker only when the field label or field semantics are themselves clear.
+For unresolved non-core facts, prefer a `PropertyValue` with a normalized `name` and `"value": ""`.
+This allows reviewers and downstream software to detect that the field exists on the receipt but still needs human confirmation.
+If the field label or semantics are also unclear, omit the field rather than inventing a synthetic label.
+
+Sensitive-data rule:
+For personal, sensitive, or reviewer-relevant fields, be stricter, not looser.
+If a name, account identifier, member identifier, personal reference, or similar sensitive field is noisy and cannot be reconstructed with high confidence from the receipt alone, do not guess it.
+Prefer an unresolved empty value when the field is clearly labeled, or omission when even the field identity is unclear.
+
 Critical evidence-boundary rule:
 You MUST NOT add factual information that is absent from the receipt.
 External facts are not part of the supervision target.
@@ -70,6 +82,9 @@ Output quality rules:
 - Preserve uncertainty conservatively: do not overclaim
 - Prefer omission over enrichment when a fact is not directly evidenced by the receipt
 - Weak receipts are allowed; the output may be sparse if the receipt is sparse
+- Do not use fake placeholder values such as "Unknown item" or "Item on receipt"
+- Do not convert unclear numeric fragments into product names, people, addresses, or other specific facts without strong receipt evidence
+- Use empty-string unresolved markers only for clearly identified fields, not as a substitute for inventing structure
 
 Receipt interpretation rules:
 
@@ -89,6 +104,8 @@ Conservatism rules:
 - If a field is ambiguous, prefer omission over fabrication
 - If multiple corrections are possible, choose the one best supported by the receipt evidence
 - Do not create fake IDs, fake addresses, fake companies, fake products, or fake interpretations
+- If a field is clearly present but the value is not recoverable, keep the field unresolved with an empty string only when the field identity is clear
+- If both the label and the value are unclear, omit the field rather than inventing a label just to preserve structure
 
 Normalization rules:
 

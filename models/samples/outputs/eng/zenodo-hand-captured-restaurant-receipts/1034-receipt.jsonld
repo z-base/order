@@ -6,22 +6,9 @@
       "@type": "Order",
       "priceCurrency": "USD",
       "paymentStatus": "https://schema.org/PaymentComplete",
-      "acceptedOffer": [
-        { "@id": "#offer-1" }
-      ],
       "additionalProperty": [
         { "@type": "PropertyValue", "name": "RawTotal", "value": "17.00" }
       ]
-    },
-    {
-      "@id": "#offer-1",
-      "@type": "Offer",
-      "itemOffered": { "@id": "#item-1" }
-    },
-    {
-      "@id": "#item-1",
-      "@type": "Product",
-      "name": "17.00"
     }
   ]
 }
