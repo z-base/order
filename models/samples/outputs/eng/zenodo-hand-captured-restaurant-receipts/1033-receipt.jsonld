@@ -1,0 +1,74 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "telephone": "(984) 329-2900",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "8030 Renaissance Parkway",
+        "addressLocality": "Durham",
+        "addressRegion": "NC",
+        "postalCode": "27713"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderDate": "2019-05-18T12:25:00",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Server", "value": "ANASTASHIA" },
+        { "@type": "PropertyValue", "name": "Table", "value": "57/1" },
+        { "@type": "PropertyValue", "name": "Guests", "value": 2 },
+        { "@type": "PropertyValue", "name": "Printed Number", "value": "80001" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "43.47" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "USD", "value": "3.26" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "46.73" },
+        { "@type": "PropertyValue", "name": "Balance Due", "unitText": "USD", "value": "46.73" },
+        { "@type": "PropertyValue", "name": "Loyalty Notice", "value": "Ask your Server about the Uncle Julio's Loyalty Program free to join and tons of rewards to earn!" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "15.49",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" },
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Protein", "value": "Ground Beef" },
+        { "@type": "PropertyValue", "name": "Add-on", "value": "Chicken Fajita" }
+      ]
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "Taco Salad" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "8.99",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "Add Chicken Fajita" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "18.99",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "MenuItem", "name": "Pechuga de Pollo" }
+  ]
+}

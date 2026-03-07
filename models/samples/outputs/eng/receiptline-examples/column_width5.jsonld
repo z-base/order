@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "10.00",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5.00", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "Boiled salted peanuts" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "5.00",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "5.00", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" }
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "Tanashi cabbage with salted flavor" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "5.00",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" }
+    },
+    { "@id": "#item-3", "@type": "MenuItem", "name": "Shinshu lettuce salad" }
+  ]
+}

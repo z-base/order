@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Riverstone Books",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2816 Pine Rd",
+        "addressLocality": "Nashville",
+        "addressRegion": "AZ",
+        "postalCode": "18553"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000022",
+      "orderDate": "2024-12-22T20:47:50",
+      "priceCurrency": "USD",
+      "paymentMethod": "https://schema.org/PaymentCard",
+      "acceptedOffer": [
+        { "@id": "#offer-1" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Parker" },
+        { "@type": "PropertyValue", "name": "Payment Method Label", "value": "Amex" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "103.20" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "USD", "value": "4.15" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "107.35" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "103.20",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "25.80", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Safety Gloves", "sku": "SKU-1335" }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Organization",
+      "name": "Summit Cleaners",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7570 Oak Ave",
+        "addressLocality": "Madison",
+        "addressRegion": "MA",
+        "postalCode": "59872"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "R-0000024",
+      "orderDate": "2022-11-06T08:39:28",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" },
+        { "@id": "#offer-6" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Cashier", "value": "Avery" },
+        { "@type": "PropertyValue", "name": "Payment Method", "value": "Card" },
+        { "@type": "PropertyValue", "name": "Subtotal", "unitText": "USD", "value": "516.81" },
+        { "@type": "PropertyValue", "name": "Discount", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Tax", "unitText": "USD", "value": "33.22" },
+        { "@type": "PropertyValue", "name": "Tip", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "550.03" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "89.73",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "29.91", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "Product", "name": "Cleaning Spray", "sku": "SKU-5870" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "84.44",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 2, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "42.22", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "Product", "name": "Notebook Set", "sku": "SKU-4988" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "115.77",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "38.59", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "Product", "name": "Ground Coffee", "sku": "SKU-3977" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "79.48",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 4, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "19.87", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "Product", "name": "Sparkling Water", "sku": "SKU-2913" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "112.86",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "37.62", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-5", "@type": "Product", "name": "Sparkling Water", "sku": "SKU-3789" },
+    {
+      "@id": "#offer-6",
+      "@type": "Offer",
+      "price": "34.53",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 3, "unitText": "item" },
+      "priceSpecification": { "@type": "UnitPriceSpecification", "price": "11.51", "priceCurrency": "USD", "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" } },
+      "itemOffered": { "@id": "#item-6" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-6", "@type": "Product", "name": "Desk Lamp", "sku": "SKU-4425" }
+  ]
+}

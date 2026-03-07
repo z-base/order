@@ -1,0 +1,94 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "Laurel Tavern Hermosa Beach",
+      "url": "http://www.laureltavern.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1220 Hermosa Beach",
+        "addressLocality": "Hermosa Beach",
+        "addressRegion": "CA",
+        "postalCode": "90254"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "1388",
+      "orderDate": "2019-01-12T13:23:00",
+      "priceCurrency": "USD",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Waiter", "value": "Sophie" },
+        { "@type": "PropertyValue", "name": "Table", "value": "501" },
+        { "@type": "PropertyValue", "name": "Customer Count", "value": 1 },
+        { "@type": "PropertyValue", "name": "Taxable", "unitText": "USD", "value": "40.50" },
+        { "@type": "PropertyValue", "name": "Sub-total", "unitText": "USD", "value": "40.50" },
+        { "@type": "PropertyValue", "name": "Taxes", "unitText": "USD", "value": "3.85" },
+        { "@type": "PropertyValue", "name": "Total Due", "unitText": "USD", "value": "44.35" },
+        { "@type": "PropertyValue", "name": "Closing Message", "value": "THANK YOU!!! ALWAYS DRIVE SAFELY." },
+        { "@type": "PropertyValue", "name": "Instagram", "value": "@laureltavern" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "5.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "BTL BEER" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "8.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "BRUSSELS SPROUTS" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "11.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "MenuItem", "name": "CANTONESE TENDERS" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "12.00",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "MenuItem", "name": "GRILLED CHEESE" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "4.50",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-5", "@type": "MenuItem", "name": "$ ADD GARLIC FRIES" }
+  ]
+}

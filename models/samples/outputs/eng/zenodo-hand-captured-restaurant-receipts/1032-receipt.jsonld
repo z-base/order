@@ -1,0 +1,97 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Restaurant",
+      "name": "WINGS & THINGS",
+      "telephone": "516-341-7075",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1717 Dutch Brdy",
+        "addressLocality": "Elmont",
+        "addressRegion": "NY",
+        "postalCode": "11003"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": { "@id": "#merchant" },
+      "orderNumber": "168",
+      "orderDate": "2017-03-19T20:14:00",
+      "priceCurrency": "USD",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "acceptedOffer": [
+        { "@id": "#offer-1" },
+        { "@id": "#offer-2" },
+        { "@id": "#offer-3" },
+        { "@id": "#offer-4" },
+        { "@id": "#offer-5" }
+      ],
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "Service Mode", "value": "OUT" },
+        { "@type": "PropertyValue", "name": "Text Tax Total", "unitText": "USD", "value": "0.75" },
+        { "@type": "PropertyValue", "name": "Total", "unitText": "USD", "value": "9.50" },
+        { "@type": "PropertyValue", "name": "Cash", "unitText": "USD", "value": "9.50" },
+        { "@type": "PropertyValue", "name": "Change", "unitText": "USD", "value": "0.00" },
+        { "@type": "PropertyValue", "name": "Closing Message", "value": "THANK YOU COME AGAIN" },
+        { "@type": "PropertyValue", "name": "PM", "value": "1" },
+        { "@type": "PropertyValue", "name": "Register", "value": "REG0001" },
+        { "@type": "PropertyValue", "name": "Printed Order Number", "value": "0168" },
+        { "@type": "PropertyValue", "name": "Printed Ticket Marker", "value": "#04" }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "price": "1.19",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-1" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-1", "@type": "MenuItem", "name": "MAC&CHZ - SMALL" },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "price": "1.19",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-2" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-2", "@type": "MenuItem", "name": "COLL GRN - SMALL" },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "price": "0.62",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-3" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-3", "@type": "MenuItem", "name": "CORN BREAD" },
+    {
+      "@id": "#offer-4",
+      "@type": "Offer",
+      "price": "5.75",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-4" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-4", "@type": "MenuItem", "name": "5 WINGS" },
+    {
+      "@id": "#offer-5",
+      "@type": "Offer",
+      "price": "0.75",
+      "priceCurrency": "USD",
+      "eligibleQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "item" },
+      "itemOffered": { "@id": "#item-5" },
+      "seller": { "@id": "#merchant" }
+    },
+    { "@id": "#item-5", "@type": "MenuItem", "name": "SPCY FRY TXTL" }
+  ]
+}
