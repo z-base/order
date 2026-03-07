@@ -1,0 +1,99 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "SHH HOTR (SUNGAiT RENGLIT) SON BHD.",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Company Registration Number",
+        "value": "801580-T"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "No. 343, Jalan Kurau, Sungai Rengit",
+        "postalCode": "81620",
+        "addressLocality": "Pengerang",
+        "addressRegion": "Johor"
+      },
+      "telephone": "07-8263254"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "22497",
+      "orderDate": "2019-01-23T13:14:15",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Sub Total",
+          "value": "20.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "20.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding Adjustment",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash",
+          "value": "20.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "0.00",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "20.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "tube"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "CROCS 300X17 TUBES"
+    }
+  ]
+}

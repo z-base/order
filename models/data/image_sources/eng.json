@@ -16,13 +16,6 @@
       "licenseExpectation": "Apache-2.0"
     },
     {
-      "kind": "huggingface",
-      "id": "Voxel51/scanned_receipts",
-      "title": "Voxel51/scanned_receipts",
-      "description": "Primarily English scanned receipt images from the SROIE mirror.",
-      "licenseExpectation": "CC-BY-4.0"
-    },
-    {
       "kind": "direct",
       "title": "Zenodo hand-captured restaurant receipts",
       "slug": "zenodo-hand-captured-restaurant-receipts",

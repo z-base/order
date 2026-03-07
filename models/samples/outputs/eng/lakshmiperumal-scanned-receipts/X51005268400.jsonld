@@ -1,0 +1,78 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "TAX INVOICE MERCHANT",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NO.2-1-1 JALAN FITA PRIMA Q, U 13/0, 40170 SHAH ALAM",
+        "addressLocality": "SHAH ALAM",
+        "addressRegion": "SELANGOR"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "C1-0170778",
+      "orderDate": "2017-12-28T22:17:32",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "HASSAN"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Qty",
+          "value": "1.00"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "100.00",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "price": "100.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "HAKANAN"
+    }
+  ]
+}

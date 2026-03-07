@@ -1,0 +1,94 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "ABC HO TRADING",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "0.284, JALAN HARMON 3/2, TAMAN DESA HARMON",
+        "postalCode": "81100",
+        "addressLocality": "JOHOR BAHRU",
+        "addressRegion": "JOHOR"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "01143008",
+      "orderDate": "2019-01-09T20:01:11",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "Cash Bill"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Amount",
+          "value": "31.60",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash Received",
+          "value": "101.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "70.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cashier",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "31.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "15.50",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "PLASTIC"
+    }
+  ]
+}

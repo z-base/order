@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "ATK",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NO. 17-6, JALAN SE1A INAH (?), ULAX, SERI ALAM",
+        "postalCode": "40170",
+        "addressLocality": "SHAH ALAM",
+        "addressRegion": "SELANGOR"
+      },
+      "telephone": "012-6651703",
+      "faxNumber": "04-33633408",
+      "taxID": "600394528748"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CSPO394921",
+      "orderDate": "2017-06-15T15:28:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "RECEIPT"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Salesperson",
+          "value": "AHODZ"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Sub Total",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Discount",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Rounding",
+          "value": "0.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total GST Included",
+          "value": "6%",
+          "unitText": "%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "0.00",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "15.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "1.6 KG X 500MM BIG ITEM"
+    }
+  ]
+}

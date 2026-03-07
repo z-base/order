@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "SHELL PETRO TRADING",
+      "taxID": "001090105344",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "LOT 2685 JLN GENTING KLANG",
+        "postalCode": "53300",
+        "addressLocality": "KL"
+      },
+      "telephone": "03-40212008"
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "60000053668",
+      "orderDate": "2018-03-18T15:17:00",
+      "paymentMethod": "https://schema.org/CreditCard",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "Receipt"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment",
+          "value": "Visa"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total (Excluding GST)",
+          "value": "81.13",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST",
+          "value": "4.87",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Gross",
+          "value": "86.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Loyalty Card",
+          "value": "6018840126306675"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Points Awarded",
+          "value": "35"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "86.00",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2.45,
+        "unitText": "litre"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Printed Unit Price",
+          "value": "35.10",
+          "unitText": "MYR per litre"
+        }
+      ]
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "V-Power 97"
+    }
+  ]
+}

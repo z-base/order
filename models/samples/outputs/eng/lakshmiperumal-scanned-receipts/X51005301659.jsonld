@@ -1,0 +1,105 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "HOME MASTER HARDWARE & ELECTRICAL",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Company Registration No",
+        "value": "5403711551-P"
+      },
+      "taxID": "001637511165",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "NG.113G & 115G, JALAN SETIA GEMILANG, U13/EG",
+        "addressLocality": "BANDAR SETIA ALAM",
+        "addressRegion": "SELANGOR",
+        "postalCode": "40170"
+      }
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderNumber": "CS 67332",
+      "orderDate": "2017-12-23T14:03:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Sub Total",
+          "value": "15.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Excluding GST",
+          "value": "15.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Incl GST",
+          "value": "15.90",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Payment",
+          "value": "50.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "34.10",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Items",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "15.90",
+      "priceCurrency": "MYR",
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "unit"
+      },
+      "itemOffered": {
+        "@id": "#product-1"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "gtin13": "24NNTY",
+      "name": "M ONE TARE"
+    }
+  ]
+}

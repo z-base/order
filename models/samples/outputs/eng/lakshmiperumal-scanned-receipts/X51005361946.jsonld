@@ -1,0 +1,155 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "MR DLV(SON) BHD",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "LOT 1851-4 & 1851-8, JALAN KOR 6, KAWASAN PERINDUSTRIAN BALAKONG",
+        "addressLocality": "SERI KEMBANGAN",
+        "addressRegion": "SELANGOR",
+        "postalCode": "43300"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Operator",
+          "value": "Sah Biyay Kumar"
+        }
+      ]
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderDate": "2018-03-14T21:49:00",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        },
+        {
+          "@id": "#offer-2"
+        },
+        {
+          "@id": "#offer-3"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Number",
+          "value": "000308020352"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Inclusive Total",
+          "value": "35.10",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Amount",
+          "value": "2.10",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash",
+          "value": "50.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "12.90",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "11.20",
+      "priceCurrency": "MYR",
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      }
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "FISH"
+    },
+    {
+      "@id": "#offer-2",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "3.00",
+      "priceCurrency": "MYR",
+      "itemOffered": {
+        "@id": "#product-2"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 2,
+        "unitText": "item"
+      }
+    },
+    {
+      "@id": "#product-2",
+      "@type": "Product",
+      "name": "ADG1"
+    },
+    {
+      "@id": "#offer-3",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "22.90",
+      "priceCurrency": "MYR",
+      "itemOffered": {
+        "@id": "#product-3"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Barcode",
+          "value": "9553114461966"
+        }
+      ]
+    },
+    {
+      "@id": "#product-3",
+      "@type": "Product",
+      "name": "TRATLING SKT 5GH+SP OX1.25MM CASLE"
+    }
+  ]
+}

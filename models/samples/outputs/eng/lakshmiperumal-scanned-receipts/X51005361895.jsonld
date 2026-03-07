@@ -1,0 +1,112 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": "#merchant",
+      "@type": "Store",
+      "name": "FUYI MI T",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "OK, BE AA",
+        "addressLocality": "SELANGOR",
+        "addressRegion": "SELANGOR",
+        "postalCode": "45600"
+      },
+      "telephone": "03-3279 1851",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "TRN",
+          "value": "1CR0576494"
+        }
+      ]
+    },
+    {
+      "@id": "#order",
+      "@type": "Order",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "orderDate": "2018-01-25T13:22:56",
+      "paymentMethod": "https://schema.org/Cash",
+      "paymentStatus": "https://schema.org/PaymentComplete",
+      "priceCurrency": "MYR",
+      "acceptedOffer": [
+        {
+          "@id": "#offer-1"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "GST Number",
+          "value": "001604310720"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Receipt Type",
+          "value": "TAX INVOICE"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Total Including GST",
+          "value": "9.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "GST Amount",
+          "value": "0.51",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Cash",
+          "value": "50.00",
+          "unitText": "MYR"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Change",
+          "value": "41.00",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#offer-1",
+      "@type": "Offer",
+      "seller": {
+        "@id": "#merchant"
+      },
+      "price": "9.00",
+      "priceCurrency": "MYR",
+      "itemOffered": {
+        "@id": "#product-1"
+      },
+      "eligibleQuantity": {
+        "@type": "QuantitativeValue",
+        "value": 1,
+        "unitText": "item"
+      },
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Barcode",
+          "value": "013"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Net Amount",
+          "value": "8.49",
+          "unitText": "MYR"
+        }
+      ]
+    },
+    {
+      "@id": "#product-1",
+      "@type": "Product",
+      "name": "SUMMER CUP 48X230ML"
+    }
+  ]
+}
