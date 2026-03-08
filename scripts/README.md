@@ -18,6 +18,6 @@ Convenience entrypoints live in `package.json`:
 
 - `npm run pipeline:data -- --language eng`
 - `npm run pipeline:overfit -- --language eng`
-- `npm run pipeline:production -- --language eng`
+- `npm run pipeline:generalize -- --language eng`
 
 Use the underlying scripts directly when you need fine-grained flags beyond the convenience pipeline wrappers.
