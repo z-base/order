@@ -1,0 +1,1 @@
+# In this directory you should collect data according to these rules

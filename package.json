@@ -2,7 +2,10 @@
   "name": "@z-base/package-name",
   "version": "0.0.0",
   "description": "",
-  "keywords": ["typescript", "z-base"],
+  "keywords": [
+    "typescript",
+    "z-base"
+  ],
   "license": "Apache-2.0",
   "type": "module",
   "main": "dist/index.js",
@@ -10,19 +13,23 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
+      "import": "./dist/index.js"
     },
-    "./package.json": "./package.json",
+    "./package.json": "./package.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<entity>/<package-name>.git",
+    "url": "git+https://github.com/<entity>/<package-name>.git"
   },
   "bugs": {
-    "url": "https://github.com/<entity>/<package-name>/issues",
+    "url": "https://github.com/<entity>/<package-name>/issues"
   },
   "homepage": "https://z-base.github.io/<package-name>",
-  "files": ["dist", "LICENSE", "README.md"],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "countSamples": "node models/scripts/.helpers/get-outputs-sample-count.mjs",
     "download:receipt-images": "node models/scripts/data/download-receipt-images.mjs",
@@ -47,21 +54,23 @@
     "test": "npm run build && node test/run-coverage.mjs && node test/e2e/run.mjs",
     "bench": "npm run build && node benchmark/bench.js",
     "prepare": "husky",
-    "prepublishOnly": "npm run test && npm run bench",
+    "prepublishOnly": "npm run test && npm run bench"
   },
   "c8": {
     "all": true,
-    "include": ["dist/**/*.js"],
+    "include": [
+      "dist/**/*.js"
+    ],
     "exclude": [
       "dist/**/*.d.ts",
       "test/**",
       "benchmark/**",
-      "playwright.config.ts",
-    ],
+      "playwright.config.ts"
+    ]
   },
   "sideEffects": false,
   "engines": {
-    "node": ">=18",
+    "node": ">=18"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
@@ -73,7 +82,7 @@
     "husky": "^9.1.7",
     "playwright": "^1.58.2",
     "prettier": "^3.8.1",
-    "typescript": "^5.6.3",
+    "typescript": "^5.6.3"
   },
   "dependencies": {
     "@adobe/structured-data-validator": "^1.7.0",
@@ -87,5 +96,6 @@
     "schema-dts": "^1.1.5",
     "sharp": "^0.34.5",
     "tesseract.js": "^7.0.0",
-  },
+    "unzipper": "^0.12.3"
+  }
 }
